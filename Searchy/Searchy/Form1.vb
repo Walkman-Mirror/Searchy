@@ -38,7 +38,6 @@
         If ComboBox1.Text = "Bing" Then
             WebBrowser1.Navigate("https://www.bing.com/search?q=" & TextBox1.Text.ToString)
         End If
-
     End Sub
 
     Private Sub Button1_DoubleClick(sender As Object, e As EventArgs) Handles Button1.DoubleClick
