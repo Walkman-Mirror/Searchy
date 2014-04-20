@@ -67,6 +67,7 @@ Partial Class Form1
         'version_label
         '
         Me.version_label.AutoSize = True
+        Me.version_label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.version_label.Location = New System.Drawing.Point(171, 14)
         Me.version_label.Name = "version_label"
         Me.version_label.Size = New System.Drawing.Size(41, 13)
@@ -96,6 +97,7 @@ Partial Class Form1
         '
         Me.productname_label.AutoSize = True
         Me.productname_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.productname_label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.productname_label.Location = New System.Drawing.Point(67, 20)
         Me.productname_label.Name = "productname_label"
         Me.productname_label.Size = New System.Drawing.Size(122, 33)
