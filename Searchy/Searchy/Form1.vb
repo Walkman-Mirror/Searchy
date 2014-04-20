@@ -10,6 +10,18 @@
             WebBrowser1.Navigate(My.Settings.RememberLastSearchEngine_value.ToString)
         End If
         ComboBox1.Text = My.Settings.DefaultSerachEngine.ToString
+        If My.Settings.ShowOpenInBrowserButton = True Then
+            Button4.Visible = True
+        Else
+            Button4.Visible = False
+        End If
+        If My.Settings.ShowResultsPreview = True Then
+            Label2.Visible = True
+            WebBrowser1.Visible = True
+        Else
+            Label2.Visible = False
+            WebBrowser1.Visible = False
+        End If
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

@@ -80,7 +80,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
         Public Property RememberLastSearchEngine_value() As String
             Get
                 Return CType(Me("RememberLastSearchEngine_value"),String)
@@ -104,13 +104,61 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
         Public Property RememberLastSearchQuery_value() As String
             Get
                 Return CType(Me("RememberLastSearchQuery_value"),String)
             End Get
             Set
                 Me("RememberLastSearchQuery_value") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
+        Public Property ShowOpenInBrowserButton() As String
+            Get
+                Return CType(Me("ShowOpenInBrowserButton"),String)
+            End Get
+            Set
+                Me("ShowOpenInBrowserButton") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
+        Public Property ShowResultsPreview() As String
+            Get
+                Return CType(Me("ShowResultsPreview"),String)
+            End Get
+            Set
+                Me("ShowResultsPreview") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
+        Public Property DoubleClickSearchToOpenInBrowser() As String
+            Get
+                Return CType(Me("DoubleClickSearchToOpenInBrowser"),String)
+            End Get
+            Set
+                Me("DoubleClickSearchToOpenInBrowser") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
+        Public Property AlwaysOpenInBrowserWhenSearchIsClicked() As String
+            Get
+                Return CType(Me("AlwaysOpenInBrowserWhenSearchIsClicked"),String)
+            End Get
+            Set
+                Me("AlwaysOpenInBrowserWhenSearchIsClicked") = value
             End Set
         End Property
     End Class

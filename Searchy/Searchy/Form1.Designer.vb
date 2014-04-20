@@ -144,6 +144,7 @@ Partial Class Form1
         Me.Label2.Size = New System.Drawing.Size(45, 13)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Results:"
+        Me.Label2.Visible = False
         '
         'WebBrowser1
         '
@@ -152,6 +153,7 @@ Partial Class Form1
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.Size = New System.Drawing.Size(507, 218)
         Me.WebBrowser1.TabIndex = 6
+        Me.WebBrowser1.Visible = False
         '
         'NotifyIcon1
         '
@@ -164,7 +166,7 @@ Partial Class Form1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProjectSiteToolStripMenuItem, Me.SourceCodeToolStripMenuItem, Me.ToolStripSeparator1, Me.ToolStripMenuItem2, Me.ToolStripMenuItem1, Me.ToolStripSeparator2, Me.HideToolStripMenuItem, Me.ToolStripMenuItem4})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(209, 170)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(209, 148)
         '
         'ProjectSiteToolStripMenuItem
         '
@@ -224,6 +226,7 @@ Partial Class Form1
         Me.Button4.TabIndex = 8
         Me.Button4.Text = "&Open in browser"
         Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.Visible = False
         '
         'Label3
         '
@@ -234,13 +237,13 @@ Partial Class Form1
         Me.Label3.Size = New System.Drawing.Size(215, 25)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Finding that for you..."
+        Me.Label3.Visible = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(534, 394)
-        Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
@@ -249,6 +252,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.WebBrowser1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"

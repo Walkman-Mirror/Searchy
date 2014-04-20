@@ -9,13 +9,25 @@
       <Value Profile="(Default)">false</Value>
     </Setting>
     <Setting Name="RememberLastSearchEngine_value" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">false</Value>
     </Setting>
     <Setting Name="RememberLastSearchQuery" Type="System.String" Scope="User">
       <Value Profile="(Default)">false</Value>
     </Setting>
     <Setting Name="RememberLastSearchQuery_value" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="ShowOpenInBrowserButton" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
+    <Setting Name="ShowResultsPreview" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
+    <Setting Name="DoubleClickSearchToOpenInBrowser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="AlwaysOpenInBrowserWhenSearchIsClicked" Type="System.String" Scope="User">
+      <Value Profile="(Default)">false</Value>
     </Setting>
   </Settings>
 </SettingsFile>
