@@ -25,7 +25,11 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Hide()
+        If My.Settings.TopButtonClosesApp = False Then
+            Me.Hide()
+        Else
+            Application.Exit()
+        End If
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -47,7 +51,7 @@
             'Do nothing
         End If
     End Sub
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
         Process.Start(WebBrowser1.Url.ToString)
     End Sub
 
@@ -63,17 +67,17 @@
         End If
     End Sub
 
-    Private Sub WebBrowser1_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowser1.Navigating
+    Private Sub WebBrowser1_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs)
         WebBrowser1.Visible = False
         Label3.Visible = True
         Label3.Text = "Finding that for you..."
     End Sub
 
-    Private Sub WebBrowser1_Navigated(sender As Object, e As WebBrowserNavigatedEventArgs) Handles WebBrowser1.Navigated
+    Private Sub WebBrowser1_Navigated(sender As Object, e As WebBrowserNavigatedEventArgs)
         Label3.Text = "Finishing up..."
     End Sub
 
-    Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
+    Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs)
         Label3.Visible = False
         WebBrowser1.Visible = True
     End Sub

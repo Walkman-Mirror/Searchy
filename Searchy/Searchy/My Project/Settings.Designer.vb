@@ -161,6 +161,18 @@ Namespace My
                 Me("AlwaysOpenInBrowserWhenSearchIsClicked") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
+        Public Property TopButtonClosesApp() As String
+            Get
+                Return CType(Me("TopButtonClosesApp"),String)
+            End Get
+            Set
+                Me("TopButtonClosesApp") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
