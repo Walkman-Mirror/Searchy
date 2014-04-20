@@ -22,31 +22,20 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button4
+        'WebBrowser1
         '
-        Me.Button4.Location = New System.Drawing.Point(533, 152)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(116, 23)
-        Me.Button4.TabIndex = 12
-        Me.Button4.Text = "&Open in browser"
-        Me.Button4.UseVisualStyleBackColor = True
-        Me.Button4.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(139, 152)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 13)
-        Me.Label2.TabIndex = 10
-        Me.Label2.Text = "Results:"
-        Me.Label2.Visible = False
+        Me.WebBrowser1.Location = New System.Drawing.Point(142, 181)
+        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
+        Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.Size = New System.Drawing.Size(507, 218)
+        Me.WebBrowser1.TabIndex = 11
+        Me.WebBrowser1.Visible = False
         '
         'Label3
         '
@@ -59,14 +48,25 @@ Partial Class Form2
         Me.Label3.Text = "Finding that for you..."
         Me.Label3.Visible = False
         '
-        'WebBrowser1
+        'Label2
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(142, 181)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(507, 218)
-        Me.WebBrowser1.TabIndex = 11
-        Me.WebBrowser1.Visible = False
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(139, 152)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(45, 13)
+        Me.Label2.TabIndex = 10
+        Me.Label2.Text = "Results:"
+        Me.Label2.Visible = False
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(533, 152)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(116, 23)
+        Me.Button4.TabIndex = 12
+        Me.Button4.Text = "&Open in browser"
+        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.Visible = False
         '
         'Form2
         '
@@ -83,8 +83,8 @@ Partial Class Form2
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 End Class

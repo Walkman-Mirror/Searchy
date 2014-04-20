@@ -25,10 +25,10 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.version_label = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.version_label_small = New System.Windows.Forms.Label()
+        Me.logo_small = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.productname_label = New System.Windows.Forms.Label()
+        Me.productname_label_small = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.type_of_serach_label = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
@@ -43,47 +43,47 @@ Partial Class Form1
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.HideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.version_label_big = New System.Windows.Forms.Label()
+        Me.productname_label_big = New System.Windows.Forms.Label()
+        Me.logo_big = New System.Windows.Forms.PictureBox()
+        Me.trademark_label = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.logo_small, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.logo_big, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.version_label)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.version_label_small)
+        Me.Panel1.Controls.Add(Me.logo_small)
         Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.productname_label)
+        Me.Panel1.Controls.Add(Me.productname_label_small)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(534, 68)
         Me.Panel1.TabIndex = 0
         '
-        'version_label
+        'version_label_small
         '
-        Me.version_label.AutoSize = True
-        Me.version_label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.version_label.Location = New System.Drawing.Point(171, 14)
-        Me.version_label.Name = "version_label"
-        Me.version_label.Size = New System.Drawing.Size(41, 13)
-        Me.version_label.TabIndex = 1
-        Me.version_label.Text = "version"
+        Me.version_label_small.AutoSize = True
+        Me.version_label_small.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.version_label_small.Location = New System.Drawing.Point(171, 14)
+        Me.version_label_small.Name = "version_label_small"
+        Me.version_label_small.Size = New System.Drawing.Size(41, 13)
+        Me.version_label_small.TabIndex = 1
+        Me.version_label_small.Text = "version"
         '
-        'PictureBox1
+        'logo_small
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(62, 62)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 3
-        Me.PictureBox1.TabStop = False
+        Me.logo_small.Image = CType(resources.GetObject("logo_small.Image"), System.Drawing.Image)
+        Me.logo_small.Location = New System.Drawing.Point(3, 3)
+        Me.logo_small.Name = "logo_small"
+        Me.logo_small.Size = New System.Drawing.Size(62, 62)
+        Me.logo_small.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.logo_small.TabIndex = 3
+        Me.logo_small.TabStop = False
         '
         'Button2
         '
@@ -94,16 +94,16 @@ Partial Class Form1
         Me.Button2.Text = "&X"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'productname_label
+        'productname_label_small
         '
-        Me.productname_label.AutoSize = True
-        Me.productname_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.productname_label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.productname_label.Location = New System.Drawing.Point(67, 20)
-        Me.productname_label.Name = "productname_label"
-        Me.productname_label.Size = New System.Drawing.Size(122, 33)
-        Me.productname_label.TabIndex = 0
-        Me.productname_label.Text = "Searchy"
+        Me.productname_label_small.AutoSize = True
+        Me.productname_label_small.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.productname_label_small.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.productname_label_small.Location = New System.Drawing.Point(67, 20)
+        Me.productname_label_small.Name = "productname_label_small"
+        Me.productname_label_small.Size = New System.Drawing.Size(122, 33)
+        Me.productname_label_small.TabIndex = 0
+        Me.productname_label_small.Text = "Searchy"
         '
         'TextBox1
         '
@@ -202,47 +202,51 @@ Partial Class Form1
         Me.ToolStripMenuItem4.Size = New System.Drawing.Size(208, 22)
         Me.ToolStripMenuItem4.Text = "&Exit"
         '
-        'Label1
+        'version_label_big
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(299, 295)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(41, 13)
-        Me.Label1.TabIndex = 6
-        Me.Label1.Text = "version"
+        Me.version_label_big.AutoSize = True
+        Me.version_label_big.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.version_label_big.Location = New System.Drawing.Point(299, 295)
+        Me.version_label_big.Name = "version_label_big"
+        Me.version_label_big.Size = New System.Drawing.Size(41, 13)
+        Me.version_label_big.TabIndex = 6
+        Me.version_label_big.Text = "version"
+        Me.version_label_big.Visible = False
         '
-        'Label2
+        'productname_label_big
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(195, 301)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(122, 33)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Searchy"
+        Me.productname_label_big.AutoSize = True
+        Me.productname_label_big.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.productname_label_big.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.productname_label_big.Location = New System.Drawing.Point(195, 301)
+        Me.productname_label_big.Name = "productname_label_big"
+        Me.productname_label_big.Size = New System.Drawing.Size(122, 33)
+        Me.productname_label_big.TabIndex = 5
+        Me.productname_label_big.Text = "Searchy"
+        Me.productname_label_big.Visible = False
         '
-        'PictureBox2
+        'logo_big
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(182, 147)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(139, 131)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 7
-        Me.PictureBox2.TabStop = False
+        Me.logo_big.Image = CType(resources.GetObject("logo_big.Image"), System.Drawing.Image)
+        Me.logo_big.Location = New System.Drawing.Point(182, 147)
+        Me.logo_big.Name = "logo_big"
+        Me.logo_big.Size = New System.Drawing.Size(139, 131)
+        Me.logo_big.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.logo_big.TabIndex = 7
+        Me.logo_big.TabStop = False
+        Me.logo_big.Visible = False
         '
-        'Label3
+        'trademark_label
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(166, 334)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(177, 24)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Search for anything!"
+        Me.trademark_label.AutoSize = True
+        Me.trademark_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.trademark_label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.trademark_label.Location = New System.Drawing.Point(166, 334)
+        Me.trademark_label.Name = "trademark_label"
+        Me.trademark_label.Size = New System.Drawing.Size(177, 24)
+        Me.trademark_label.TabIndex = 8
+        Me.trademark_label.Text = "Search for anything!"
+        Me.trademark_label.Visible = False
         '
         'Form1
         '
@@ -254,10 +258,10 @@ Partial Class Form1
         Me.Controls.Add(Me.type_of_serach_label)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.trademark_label)
+        Me.Controls.Add(Me.logo_big)
+        Me.Controls.Add(Me.version_label_big)
+        Me.Controls.Add(Me.productname_label_big)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
@@ -265,23 +269,23 @@ Partial Class Form1
         Me.Text = "Searchy"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.logo_small, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.logo_big, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents productname_label As System.Windows.Forms.Label
-    Friend WithEvents version_label As System.Windows.Forms.Label
+    Friend WithEvents productname_label_small As System.Windows.Forms.Label
+    Friend WithEvents version_label_small As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents type_of_serach_label As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents logo_small As System.Windows.Forms.PictureBox
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
@@ -291,9 +295,9 @@ Partial Class Form1
     Friend WithEvents ToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProjectSiteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SourceCodeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents version_label_big As System.Windows.Forms.Label
+    Friend WithEvents productname_label_big As System.Windows.Forms.Label
+    Friend WithEvents logo_big As System.Windows.Forms.PictureBox
+    Friend WithEvents trademark_label As System.Windows.Forms.Label
 
 End Class

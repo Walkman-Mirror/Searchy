@@ -1,7 +1,7 @@
 ﻿Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        version_label.Text = My.Application.Info.Version.ToString
+        version_label_small.Text = My.Application.Info.Version.ToString
         If My.Settings.RememberLastSearchEngine = True Then
             ComboBox1.Text = My.Settings.RememberLastSearchEngine_value.ToString
         End If
@@ -16,10 +16,10 @@
             Button4.Visible = False
         End If
         If My.Settings.ShowResultsPreview = True Then
-            Label2.Visible = True
+            productname_label_big.Visible = True
             WebBrowser1.Visible = True
         Else
-            Label2.Visible = False
+            productname_label_big.Visible = False
             WebBrowser1.Visible = False
         End If
     End Sub
@@ -69,16 +69,16 @@
 
     Private Sub WebBrowser1_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs)
         WebBrowser1.Visible = False
-        Label3.Visible = True
-        Label3.Text = "Finding that for you..."
+        trademark_label.Visible = True
+        trademark_label.Text = "Finding that for you..."
     End Sub
 
     Private Sub WebBrowser1_Navigated(sender As Object, e As WebBrowserNavigatedEventArgs)
-        Label3.Text = "Finishing up..."
+        trademark_label.Text = "Finishing up..."
     End Sub
 
     Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs)
-        Label3.Visible = False
+        trademark_label.Visible = False
         WebBrowser1.Visible = True
     End Sub
 
