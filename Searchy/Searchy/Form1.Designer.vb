@@ -249,15 +249,15 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(534, 394)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.type_of_serach_label)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
