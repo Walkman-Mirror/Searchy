@@ -62,16 +62,7 @@
         WebBrowser1.Visible = True
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.Hide()
-        expanded.Show()
-    End Sub
-
     Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
-        If My.Settings.DoNotChange_LastWindowOpened = "expanded" Then
-            expanded.Show()
-        Else
-            Me.Show()
-        End If
+        Me.Show()
     End Sub
 End Class
