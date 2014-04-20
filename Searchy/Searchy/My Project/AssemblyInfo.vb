@@ -15,7 +15,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyCompany("DeavmiOSS")> 
 <Assembly: AssemblyProduct("Searchy")> 
 <Assembly: AssemblyCopyright("")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyTrademark("Search for almost everything on the web.")> 
 
 <Assembly: ComVisible(False)> 
 
