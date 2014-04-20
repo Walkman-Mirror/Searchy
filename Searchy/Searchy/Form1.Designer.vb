@@ -36,14 +36,17 @@ Partial Class Form1
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.version_label)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.productname_label)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -62,7 +65,7 @@ Partial Class Form1
         'version_label
         '
         Me.version_label.AutoSize = True
-        Me.version_label.Location = New System.Drawing.Point(116, 14)
+        Me.version_label.Location = New System.Drawing.Point(171, 14)
         Me.version_label.Name = "version_label"
         Me.version_label.Size = New System.Drawing.Size(41, 13)
         Me.version_label.TabIndex = 1
@@ -72,7 +75,7 @@ Partial Class Form1
         '
         Me.productname_label.AutoSize = True
         Me.productname_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.productname_label.Location = New System.Drawing.Point(12, 20)
+        Me.productname_label.Location = New System.Drawing.Point(67, 20)
         Me.productname_label.Name = "productname_label"
         Me.productname_label.Size = New System.Drawing.Size(122, 33)
         Me.productname_label.TabIndex = 0
@@ -153,6 +156,14 @@ Partial Class Form1
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Finding that for you..."
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(62, 62)
+        Me.PictureBox1.TabIndex = 3
+        Me.PictureBox1.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -173,6 +184,7 @@ Partial Class Form1
         Me.Text = "Searchy"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -190,5 +202,6 @@ Partial Class Form1
     Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 
 End Class
