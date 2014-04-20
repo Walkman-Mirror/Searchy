@@ -28,7 +28,7 @@ Partial Class Form1
         Me.version_label = New System.Windows.Forms.Label()
         Me.productname_label = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.type_of_serach_label = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -85,14 +85,14 @@ Partial Class Form1
         Me.TextBox1.Size = New System.Drawing.Size(326, 20)
         Me.TextBox1.TabIndex = 1
         '
-        'Label1
+        'type_of_serach_label
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 85)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(85, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Search the web:"
+        Me.type_of_serach_label.AutoSize = True
+        Me.type_of_serach_label.Location = New System.Drawing.Point(12, 85)
+        Me.type_of_serach_label.Name = "type_of_serach_label"
+        Me.type_of_serach_label.Size = New System.Drawing.Size(85, 13)
+        Me.type_of_serach_label.TabIndex = 2
+        Me.type_of_serach_label.Text = "Search the web:"
         '
         'ComboBox1
         '
@@ -163,7 +163,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.type_of_serach_label)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label3)
@@ -181,7 +181,7 @@ Partial Class Form1
     Friend WithEvents productname_label As System.Windows.Forms.Label
     Friend WithEvents version_label As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents type_of_serach_label As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label2 As System.Windows.Forms.Label
