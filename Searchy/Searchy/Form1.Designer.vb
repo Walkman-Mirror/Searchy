@@ -87,7 +87,7 @@ Partial Class Form1
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Google", "Yahoo", "Bing"})
-        Me.ComboBox1.Location = New System.Drawing.Point(347, 101)
+        Me.ComboBox1.Location = New System.Drawing.Point(347, 100)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(79, 21)
         Me.ComboBox1.TabIndex = 3
@@ -112,10 +112,10 @@ Partial Class Form1
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(15, 152)
+        Me.WebBrowser1.Location = New System.Drawing.Point(15, 151)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(507, 230)
+        Me.WebBrowser1.Size = New System.Drawing.Size(507, 231)
         Me.WebBrowser1.TabIndex = 6
         '
         'Button2
