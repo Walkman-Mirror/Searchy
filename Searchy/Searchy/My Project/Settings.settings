@@ -17,8 +17,5 @@
     <Setting Name="RememberLastSearchQuery_value" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="DoNotChange_LastWindowOpened" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
   </Settings>
 </SettingsFile>

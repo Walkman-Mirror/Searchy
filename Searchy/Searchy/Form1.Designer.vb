@@ -34,7 +34,6 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
@@ -135,18 +134,9 @@ Partial Class Form1
         Me.NotifyIcon1.Text = "Searchy"
         Me.NotifyIcon1.Visible = True
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(469, 135)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(53, 23)
-        Me.Button3.TabIndex = 7
-        Me.Button3.Text = "&Expand"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(347, 135)
+        Me.Button4.Location = New System.Drawing.Point(406, 135)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(116, 23)
         Me.Button4.TabIndex = 8
@@ -170,7 +160,6 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(534, 394)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
@@ -199,7 +188,6 @@ Partial Class Form1
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
 

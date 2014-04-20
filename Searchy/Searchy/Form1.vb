@@ -10,8 +10,6 @@
             WebBrowser1.Navigate(My.Settings.RememberLastSearchEngine_value.ToString)
         End If
         ComboBox1.Text = My.Settings.DefaultSerachEngine.ToString
-        My.Settings.DoNotChange_LastWindowOpened = "collapsed"
-        My.Settings.Save()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
