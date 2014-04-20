@@ -20,6 +20,13 @@
         If ComboBox1.Text = "Google" Then
             WebBrowser1.Navigate("https://www.google.co.za/search?q=" & TextBox1.Text.ToString)
         End If
+        If ComboBox1.Text = "Yahoo" Then
+            WebBrowser1.Navigate("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & TextBox1.Text.ToString)
+        End If
+        If ComboBox1.Text = "Bing" Then
+            WebBrowser1.Navigate("https://www.google.co.za/search?q=" & TextBox1.Text.ToString)
+        End If
+
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
