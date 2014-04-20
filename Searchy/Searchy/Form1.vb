@@ -63,4 +63,28 @@
     Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
         Me.Show()
     End Sub
+
+    Private Sub ToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem4.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub ProjectSiteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProjectSiteToolStripMenuItem.Click
+        Process.Start("https://deavmi.github.io/Searchy")
+    End Sub
+
+    Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
+        If Me.Visible = True Then
+            HideToolStripMenuItem.Text = "&Hide"
+        Else
+            HideToolStripMenuItem.Text = "S&how"
+        End If
+    End Sub
+
+    Private Sub HideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HideToolStripMenuItem.Click
+        If Me.Visible = True Then
+            Me.Hide()
+        Else
+            Me.Show()
+        End If
+    End Sub
 End Class
