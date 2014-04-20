@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿
+
+Public Class expanded
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         version_label.Text = My.Application.Info.Version.ToString
@@ -10,7 +12,7 @@
             WebBrowser1.Navigate(My.Settings.RememberLastSearchEngine_value.ToString)
         End If
         ComboBox1.Text = My.Settings.DefaultSerachEngine.ToString
-        My.Settings.DoNotChange_LastWindowOpened = "collapsed"
+        My.Settings.DoNotChange_LastWindowOpened = "expanded"
         My.Settings.Save()
     End Sub
 
@@ -64,14 +66,6 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Me.Hide()
-        expanded.Show()
-    End Sub
-
-    Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
-        If My.Settings.DoNotChange_LastWindowOpened = "expanded" Then
-            expanded.Show()
-        Else
-            Me.Show()
-        End If
+        Form1.Show()
     End Sub
 End Class
