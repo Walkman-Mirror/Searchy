@@ -36,6 +36,7 @@ Partial Class Form1
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -114,7 +115,7 @@ Partial Class Form1
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(15, 164)
+        Me.WebBrowser1.Location = New System.Drawing.Point(70, 328)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.Size = New System.Drawing.Size(507, 218)
@@ -152,20 +153,31 @@ Partial Class Form1
         Me.Button4.Text = "&Open in browser"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(142, 192)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(215, 25)
+        Me.Label3.TabIndex = 9
+        Me.Label3.Text = "Finding that for you..."
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(534, 394)
+        Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Label3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -189,5 +201,6 @@ Partial Class Form1
     Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 
 End Class

@@ -44,4 +44,17 @@
             My.Settings.RememberLastSearchQuery_value = TextBox1.Text.ToString()
         End If
     End Sub
+
+    Private Sub WebBrowser1_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles WebBrowser1.Navigating
+        Label3.Text = "Finding that for you..."
+    End Sub
+
+    Private Sub WebBrowser1_Navigated(sender As Object, e As WebBrowserNavigatedEventArgs) Handles WebBrowser1.Navigated
+        Label3.Text = "Finishing up..."
+    End Sub
+
+    Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
+
+    End Sub
+
 End Class
