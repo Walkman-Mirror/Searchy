@@ -2,6 +2,7 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         version_label_small.Text = My.Application.Info.Version.ToString
+        version_label_big.Text = My.Application.Info.Version.ToString
         If My.Settings.RememberLastSearchEngine = True Then
             ComboBox1.Text = My.Settings.RememberLastSearchEngine_value.ToString
         End If
