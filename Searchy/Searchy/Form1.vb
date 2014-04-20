@@ -24,7 +24,7 @@
         End If
         If My.Settings.ShowResultsPreview = True Then
             label2.visible = True
-            openinbrowserbutton.visible True
+            Button4.Visible = True
             label3.visible = True
             WebBrowser1.visible = True
             logo_big.Visible = False
@@ -33,7 +33,7 @@
             trademark_label.Visible = False
         Else
             label2.visible = False
-            openinbrowserbutton.visible False
+            Button4.Visible = False
             label3.visible = False
             WebBrowser1.visible = False
             logo_big.Visible = True
