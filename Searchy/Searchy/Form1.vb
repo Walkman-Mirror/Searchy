@@ -22,6 +22,11 @@
             productname_label_big.Visible = False
             WebBrowser1.Visible = False
         End If
+        If My.Settings.ShowResultsPreview = True Then
+            label2.visible = True
+            openinbrowserbutton.visible True
+            WebBrowser1.visible = True
+        End If
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
