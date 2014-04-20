@@ -41,6 +41,13 @@
 
     End Sub
 
+    Private Sub Button1_DoubleClick(sender As Object, e As EventArgs) Handles Button1.DoubleClick
+        If My.Settings.DoubleClickSearchToOpenInBrowser = True Then
+            Process.Start(WebBrowser1.Url.ToString)
+        Else
+            'Do nothing
+        End If
+    End Sub
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Process.Start(WebBrowser1.Url.ToString)
     End Sub
