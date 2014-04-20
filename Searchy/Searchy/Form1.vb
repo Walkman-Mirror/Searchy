@@ -5,6 +5,10 @@
         If My.Settings.RememberLastSearchEngine = True Then
             ComboBox1.Text = My.Settings.RememberLastSearchEngine_value.ToString
         End If
+        If My.Settings.RememberLastSearchQuery = True Then
+            TextBox1.Text = My.Settings.RememberLastSearchQuery_value.ToString
+            WebBrowser1.Navigate(My.Settings.RememberLastSearchEngine_value.ToString)
+        End If
         ComboBox1.Text = My.Settings.DefaultSerachEngine.ToString
     End Sub
 
@@ -25,6 +29,12 @@
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         If My.Settings.RememberLastSearchEngine = True Then
             My.Settings.RememberLastSearchEngine_value = ComboBox1.Text.ToString
+        End If
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+        If My.Settings.RememberLastSearchQuery = True Then
+            My.Settings.RememberLastSearchQuery_value = TextBox1.Text.ToString()
         End If
     End Sub
 End Class
