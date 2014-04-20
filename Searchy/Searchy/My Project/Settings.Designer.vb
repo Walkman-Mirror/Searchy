@@ -65,6 +65,30 @@ Namespace My
                 Me("DefaultSerachEngine") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
+        Public Property RememberLastSearchEngine() As String
+            Get
+                Return CType(Me("RememberLastSearchEngine"),String)
+            End Get
+            Set
+                Me("RememberLastSearchEngine") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property RememberLastSearchEngine_value() As String
+            Get
+                Return CType(Me("RememberLastSearchEngine_value"),String)
+            End Get
+            Set
+                Me("RememberLastSearchEngine_value") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

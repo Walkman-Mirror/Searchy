@@ -5,5 +5,11 @@
     <Setting Name="DefaultSerachEngine" Type="System.String" Scope="User">
       <Value Profile="(Default)">Google</Value>
     </Setting>
+    <Setting Name="RememberLastSearchEngine" Type="System.String" Scope="User">
+      <Value Profile="(Default)">false</Value>
+    </Setting>
+    <Setting Name="RememberLastSearchEngine_value" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

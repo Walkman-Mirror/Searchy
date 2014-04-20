@@ -34,6 +34,8 @@ Partial Class Form1
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -112,10 +114,10 @@ Partial Class Form1
         '
         'WebBrowser1
         '
-        Me.WebBrowser1.Location = New System.Drawing.Point(15, 151)
+        Me.WebBrowser1.Location = New System.Drawing.Point(15, 164)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(507, 231)
+        Me.WebBrowser1.Size = New System.Drawing.Size(507, 218)
         Me.WebBrowser1.TabIndex = 6
         '
         'Button2
@@ -132,11 +134,31 @@ Partial Class Form1
         Me.NotifyIcon1.Text = "Searchy"
         Me.NotifyIcon1.Visible = True
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(469, 135)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(53, 23)
+        Me.Button3.TabIndex = 7
+        Me.Button3.Text = "&Expand"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(347, 135)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(116, 23)
+        Me.Button4.TabIndex = 8
+        Me.Button4.Text = "&Open in browser"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(534, 394)
+        Me.Controls.Add(Me.Button4)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.WebBrowser1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
@@ -165,5 +187,7 @@ Partial Class Form1
     Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
 
 End Class
