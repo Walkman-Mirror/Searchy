@@ -43,6 +43,7 @@
             version_label_big.Visible = True
             trademark_label.Visible = True
         End If
+        Timer1.Start()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -137,5 +138,11 @@
 
     Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
         About.ShowDialog()
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If My.Computer.Keyboard.CtrlKeyDown = True And My.Computer.Keyboard.AltKeyDown = True And My.Computer.Keyboard.ShiftKeyDown = True Then
+            Me.Show()
+        End If
     End Sub
 End Class
