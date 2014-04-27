@@ -141,7 +141,7 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If My.Computer.Keyboard.CtrlKeyDown = True And My.Computer.Keyboard.AltKeyDown = True And My.Computer.Keyboard.ShiftKeyDown = True Then
+        If My.Computer.Keyboard.CtrlKeyDown = True And My.Computer.Keyboard.ShiftKeyDown = True Then
             Me.Show()
         End If
     End Sub
