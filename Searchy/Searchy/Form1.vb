@@ -1,8 +1,9 @@
 ﻿Public Class Form1
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        version_label_small.Text = My.Application.Info.Version.ToString
-        version_label_big.Text = My.Application.Info.Version.ToString
+        Dim version As String = My.Application.Info.Version.ToString & " (beta)"
+        version_label_small.Text = version
+        version_label_big.Text = version
         If My.Settings.RememberLastSearchEngine = True Then
             ComboBox1.Text = My.Settings.RememberLastSearchEngine_value.ToString
         End If
@@ -128,5 +129,13 @@
         Else
             Me.Show()
         End If
+    End Sub
+
+    Private Sub SubmitFeedbackToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitFeedbackToolStripMenuItem.Click
+        Process.Start("mailto:tristankildaire@gmail.com")
+    End Sub
+
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+        About.ShowDialog()
     End Sub
 End Class
