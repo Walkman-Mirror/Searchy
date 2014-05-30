@@ -11,7 +11,7 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Searchy")> 
-<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyDescription("Search for almost everything on the web, quickly.")> 
 <Assembly: AssemblyCompany("DeavmiOSS")> 
 <Assembly: AssemblyProduct("Searchy")> 
 <Assembly: AssemblyCopyright("")> 
