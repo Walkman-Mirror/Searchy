@@ -43,7 +43,7 @@
             version_label_big.Visible = True
             trademark_label.Visible = True
         End If
-        Timer1.Start()
+        KeyChecker.Start()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -140,7 +140,7 @@
         About.ShowDialog()
     End Sub
 
-    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles KeyChecker.Tick
         If My.Computer.Keyboard.CtrlKeyDown = True And My.Computer.Keyboard.ShiftKeyDown = True Then
             If Me.Visible = True Then
                 Me.Hide()

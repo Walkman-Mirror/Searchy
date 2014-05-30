@@ -35,6 +35,8 @@ Partial Class Form1
         Me.Button1 = New System.Windows.Forms.Button()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SubmitFeedbackToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ProjectSiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SourceCodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -51,9 +53,7 @@ Partial Class Form1
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.SubmitFeedbackToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.KeyChecker = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.logo_small, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -158,6 +158,17 @@ Partial Class Form1
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SubmitFeedbackToolStripMenuItem, Me.ToolStripSeparator3, Me.ProjectSiteToolStripMenuItem, Me.SourceCodeToolStripMenuItem, Me.ToolStripSeparator1, Me.ToolStripMenuItem2, Me.ToolStripMenuItem1, Me.ToolStripSeparator2, Me.HideToolStripMenuItem, Me.ToolStripMenuItem4})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(209, 176)
+        '
+        'SubmitFeedbackToolStripMenuItem
+        '
+        Me.SubmitFeedbackToolStripMenuItem.Name = "SubmitFeedbackToolStripMenuItem"
+        Me.SubmitFeedbackToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
+        Me.SubmitFeedbackToolStripMenuItem.Text = "S&ubmit feedback"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(205, 6)
         '
         'ProjectSiteToolStripMenuItem
         '
@@ -295,18 +306,7 @@ Partial Class Form1
         Me.Label2.Text = "Results:"
         Me.Label2.Visible = False
         '
-        'SubmitFeedbackToolStripMenuItem
-        '
-        Me.SubmitFeedbackToolStripMenuItem.Name = "SubmitFeedbackToolStripMenuItem"
-        Me.SubmitFeedbackToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
-        Me.SubmitFeedbackToolStripMenuItem.Text = "S&ubmit feedback"
-        '
-        'ToolStripSeparator3
-        '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(205, 6)
-        '
-        'Timer1
+        'KeyChecker
         '
         '
         'Form1
@@ -370,6 +370,6 @@ Partial Class Form1
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents SubmitFeedbackToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents KeyChecker As System.Windows.Forms.Timer
 
 End Class
