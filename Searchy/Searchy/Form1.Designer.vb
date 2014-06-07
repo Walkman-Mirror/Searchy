@@ -105,7 +105,7 @@ Partial Class Form1
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(15, 101)
+        Me.TextBox1.Location = New System.Drawing.Point(15, 115)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(326, 20)
         Me.TextBox1.TabIndex = 1
@@ -113,7 +113,7 @@ Partial Class Form1
         'type_of_serach_label
         '
         Me.type_of_serach_label.AutoSize = True
-        Me.type_of_serach_label.Location = New System.Drawing.Point(12, 85)
+        Me.type_of_serach_label.Location = New System.Drawing.Point(12, 99)
         Me.type_of_serach_label.Name = "type_of_serach_label"
         Me.type_of_serach_label.Size = New System.Drawing.Size(85, 13)
         Me.type_of_serach_label.TabIndex = 2
@@ -123,14 +123,14 @@ Partial Class Form1
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Google", "Yahoo", "Bing"})
-        Me.ComboBox1.Location = New System.Drawing.Point(347, 100)
+        Me.ComboBox1.Location = New System.Drawing.Point(347, 114)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(79, 21)
         Me.ComboBox1.TabIndex = 3
         '
         'btnSearch
         '
-        Me.btnSearch.Location = New System.Drawing.Point(432, 99)
+        Me.btnSearch.Location = New System.Drawing.Point(432, 113)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(90, 23)
         Me.btnSearch.TabIndex = 4
@@ -218,7 +218,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(534, 394)
+        Me.ClientSize = New System.Drawing.Size(534, 172)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.type_of_serach_label)
