@@ -54,18 +54,21 @@
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If ComboBox1.Text = "Google" Then
-            WebBrowser1.Navigate("https://www.google.co.za/search?q=" & TextBox1.Text.ToString)
-        End If
-        If ComboBox1.Text = "Yahoo" Then
-            WebBrowser1.Navigate("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & TextBox1.Text.ToString)
-        End If
-        If ComboBox1.Text = "Bing" Then
-            WebBrowser1.Navigate("https://www.bing.com/search?q=" & TextBox1.Text.ToString)
-        End If
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Search(Query:=TextBox1.Text)
     End Sub
 
+    Private Sub Search(Query As String)
+        If ComboBox1.Text = "Google" Then
+            Process.Start("https://www.google.co.za/search?q=" & Query.ToString)
+        End If
+        If ComboBox1.Text = "Yahoo" Then
+            Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query.ToString)
+        End If
+        If ComboBox1.Text = "Bing" Then
+            Process.Start("https://www.bing.com/search?q=" & Query.ToString)
+        End If
+    End Sub
     Private Sub Button1_DoubleClick(sender As Object, e As EventArgs) Handles Button1.DoubleClick
         If My.Settings.DoubleClickSearchToOpenInBrowser = True Then
             Process.Start(WebBrowser1.Url.ToString)
