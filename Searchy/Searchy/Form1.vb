@@ -1,7 +1,6 @@
 ﻿Public Class Form1
-
+    Public version As String = My.Application.Info.Version.ToString & " (pre-release)"
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim version As String = My.Application.Info.Version.ToString & " (beta)"
         version_label_small.Text = version
         If My.Settings.RememberLastSearchEngine = True Then
             ComboBox1.Text = My.Settings.RememberLastSearchEngine_value.ToString
