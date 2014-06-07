@@ -32,7 +32,7 @@ Partial Class Form1
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.type_of_serach_label = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnSearch = New System.Windows.Forms.Button()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SubmitFeedbackToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -45,19 +45,10 @@ Partial Class Form1
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.HideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.version_label_big = New System.Windows.Forms.Label()
-        Me.productname_label_big = New System.Windows.Forms.Label()
-        Me.logo_big = New System.Windows.Forms.PictureBox()
-        Me.trademark_label = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.KeyChecker = New System.Windows.Forms.Timer(Me.components)
         Me.Panel1.SuspendLayout()
         CType(Me.logo_small, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
-        CType(Me.logo_big, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -137,14 +128,14 @@ Partial Class Form1
         Me.ComboBox1.Size = New System.Drawing.Size(79, 21)
         Me.ComboBox1.TabIndex = 3
         '
-        'Button1
+        'btnSearch
         '
-        Me.Button1.Location = New System.Drawing.Point(432, 99)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(90, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "&Search"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnSearch.Location = New System.Drawing.Point(432, 99)
+        Me.btnSearch.Name = "btnSearch"
+        Me.btnSearch.Size = New System.Drawing.Size(90, 23)
+        Me.btnSearch.TabIndex = 4
+        Me.btnSearch.Text = "&Search"
+        Me.btnSearch.UseVisualStyleBackColor = True
         '
         'NotifyIcon1
         '
@@ -220,92 +211,6 @@ Partial Class Form1
         Me.ToolStripMenuItem4.Size = New System.Drawing.Size(208, 22)
         Me.ToolStripMenuItem4.Text = "&Exit"
         '
-        'version_label_big
-        '
-        Me.version_label_big.AutoSize = True
-        Me.version_label_big.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.version_label_big.Location = New System.Drawing.Point(299, 295)
-        Me.version_label_big.Name = "version_label_big"
-        Me.version_label_big.Size = New System.Drawing.Size(41, 13)
-        Me.version_label_big.TabIndex = 6
-        Me.version_label_big.Text = "version"
-        Me.version_label_big.Visible = False
-        '
-        'productname_label_big
-        '
-        Me.productname_label_big.AutoSize = True
-        Me.productname_label_big.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.productname_label_big.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.productname_label_big.Location = New System.Drawing.Point(195, 301)
-        Me.productname_label_big.Name = "productname_label_big"
-        Me.productname_label_big.Size = New System.Drawing.Size(122, 33)
-        Me.productname_label_big.TabIndex = 5
-        Me.productname_label_big.Text = "Searchy"
-        Me.productname_label_big.Visible = False
-        '
-        'logo_big
-        '
-        Me.logo_big.Image = CType(resources.GetObject("logo_big.Image"), System.Drawing.Image)
-        Me.logo_big.Location = New System.Drawing.Point(182, 147)
-        Me.logo_big.Name = "logo_big"
-        Me.logo_big.Size = New System.Drawing.Size(139, 131)
-        Me.logo_big.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.logo_big.TabIndex = 7
-        Me.logo_big.TabStop = False
-        Me.logo_big.Visible = False
-        '
-        'trademark_label
-        '
-        Me.trademark_label.AutoSize = True
-        Me.trademark_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.trademark_label.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.trademark_label.Location = New System.Drawing.Point(89, 334)
-        Me.trademark_label.Name = "trademark_label"
-        Me.trademark_label.Size = New System.Drawing.Size(351, 24)
-        Me.trademark_label.TabIndex = 8
-        Me.trademark_label.Text = "Search for almost everything on the web."
-        Me.trademark_label.Visible = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(150, 192)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(215, 25)
-        Me.Label3.TabIndex = 17
-        Me.Label3.Text = "Finding that for you..."
-        Me.Label3.Visible = False
-        '
-        'WebBrowser1
-        '
-        Me.WebBrowser1.Location = New System.Drawing.Point(15, 164)
-        Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
-        Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.Size = New System.Drawing.Size(507, 218)
-        Me.WebBrowser1.TabIndex = 21
-        Me.WebBrowser1.Visible = False
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(406, 135)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(116, 23)
-        Me.Button4.TabIndex = 22
-        Me.Button4.Text = "&Open in browser"
-        Me.Button4.UseVisualStyleBackColor = True
-        Me.Button4.Visible = False
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 135)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 13)
-        Me.Label2.TabIndex = 20
-        Me.Label2.Text = "Results:"
-        Me.Label2.Visible = False
-        '
         'KeyChecker
         '
         '
@@ -314,19 +219,11 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(534, 394)
-        Me.Controls.Add(Me.WebBrowser1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.type_of_serach_label)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.trademark_label)
-        Me.Controls.Add(Me.logo_big)
-        Me.Controls.Add(Me.version_label_big)
-        Me.Controls.Add(Me.productname_label_big)
-        Me.Controls.Add(Me.Label3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
@@ -336,7 +233,6 @@ Partial Class Form1
         Me.Panel1.PerformLayout()
         CType(Me.logo_small, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)
-        CType(Me.logo_big, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -347,7 +243,7 @@ Partial Class Form1
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents type_of_serach_label As System.Windows.Forms.Label
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btnSearch As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
     Friend WithEvents logo_small As System.Windows.Forms.PictureBox
@@ -360,14 +256,6 @@ Partial Class Form1
     Friend WithEvents ToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ProjectSiteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SourceCodeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents version_label_big As System.Windows.Forms.Label
-    Friend WithEvents productname_label_big As System.Windows.Forms.Label
-    Friend WithEvents logo_big As System.Windows.Forms.PictureBox
-    Friend WithEvents trademark_label As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents WebBrowser1 As System.Windows.Forms.WebBrowser
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents SubmitFeedbackToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents KeyChecker As System.Windows.Forms.Timer

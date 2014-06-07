@@ -3,7 +3,6 @@
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim version As String = My.Application.Info.Version.ToString & " (beta)"
         version_label_small.Text = version
-        version_label_big.Text = version
         If My.Settings.RememberLastSearchEngine = True Then
             ComboBox1.Text = My.Settings.RememberLastSearchEngine_value.ToString
         End If
@@ -54,7 +53,7 @@
         End If
     End Sub
 
-    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         Search(Query:=TextBox1.Text)
     End Sub
 
@@ -69,7 +68,7 @@
             Process.Start("https://www.bing.com/search?q=" & Query.ToString)
         End If
     End Sub
-    Private Sub Button1_DoubleClick(sender As Object, e As EventArgs) Handles Button1.DoubleClick
+    Private Sub Button1_DoubleClick(sender As Object, e As EventArgs) Handles btnSearch.DoubleClick
         If My.Settings.DoubleClickSearchToOpenInBrowser = True Then
             Process.Start(WebBrowser1.Url.ToString)
         Else
