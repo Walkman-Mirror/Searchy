@@ -23,21 +23,11 @@
     End Sub
 
     Private Sub Search(Query As String)
-        If ComboBox1.Text = "Google" Then
-            Process.Start("https://www.google.co.za/search?q=" & Query)
-        End If
-        If ComboBox1.Text = "Yahoo" Then
-            Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
-        End If
-        If ComboBox1.Text = "Bing" Then
-            Process.Start("https://www.bing.com/search?q=" & Query)
-        End If
-        If ComboBox1.Text = "DuckDuckGo" Then
-            Process.Start("https://duckduckgo.com/?q=" & Query)
-        End If
-        If ComboBox1.Text = "GitHub" Then
-            Process.Start("https://github.com/search?q=" & Query)
-        End If
+        If ComboBox1.Text = "Google" Then Process.Start("https://www.google.co.za/search?q=" & Query)
+        If ComboBox1.Text = "Yahoo" Then Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
+        If ComboBox1.Text = "Bing" Then Process.Start("https://www.bing.com/search?q=" & Query)
+        If ComboBox1.Text = "DuckDuckGo" Then Process.Start("https://duckduckgo.com/?q=" & Query)
+        If ComboBox1.Text = "GitHub" Then Process.Start("https://github.com/search?q=" & Query)
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
