@@ -1,16 +1,16 @@
 ﻿Public Class Searchy
     Public version As String = My.Application.Info.Version.ToString & " (pre-release)"
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        version_label_small.Text = version
+        lblVersionSmall.Text = version
         If My.Settings.RememberLastSearchEngine = True Then
-            ComboBox1.Text = My.Settings.RememberLastSearchEngine_value.ToString
+            cbEngine.Text = My.Settings.RememberLastSearchEngine_value.ToString
         End If
-        If My.Settings.RememberLastSearchQuery = True Then TextBox1.Text = My.Settings.RememberLastSearchQuery_value
-        ComboBox1.Text = My.Settings.DefaultSerachEngine
-        KeyChecker.Start()
+        If My.Settings.RememberLastSearchQuery = True Then txtQuery.Text = My.Settings.RememberLastSearchQuery_value
+        cbEngine.Text = My.Settings.DefaultSerachEngine
+        timerKeyChecker.Start()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnClose.Click
         If My.Settings.TopButtonClosesApp = False Then
             Me.Hide()
         Else
@@ -19,34 +19,34 @@
     End Sub
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        Search(Query:=TextBox1.Text)
+        Search(Query:=txtQuery.Text)
     End Sub
 
     Private Sub Search(Query As String)
         'Site search engines
-        If ComboBox1.Text = "Google" Then
-            Process.Start("Process.Start("https://www.google.co.za/search?q=" & Query)")
-        ElseIf ComboBox1.Text = "Yahoo" Then
+        If cbEngine.Text = "Google" Then
+            Process.Start("https://www.google.co.za/search?q=" & Query & "&qscrl=1")
+        ElseIf cbEngine.Text = "Yahoo" Then
             Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
-        ElseIf ComboBox1.Text = "Bing" Then
+        ElseIf cbEngine.Text = "Bing" Then
             Process.Start("https://www.bing.com/search?q=" & Query)
-        ElseIf ComboBox1.Text = "DuckDuckGo" Then
+        ElseIf cbEngine.Text = "DuckDuckGo" Then
             Process.Start("https://duckduckgo.com/?q=" & Query)
-        ElseIf ComboBox1.Text = "YouTube" Then 'Video search engines
+        ElseIf cbEngine.Text = "YouTube" Then 'Video search engines
             Process.Start("https://www.youtube.com/results?search_query=" & Query)
-        ElseIf ComboBox1.Text = "Dailymotion" Then
+        ElseIf cbEngine.Text = "Dailymotion" Then
             Process.Start("https://www.dailymotion.com/en/relevance/search/" & Query)
-        ElseIf ComboBox1.Text = "GitHub" Then 'Code search engines
+        ElseIf cbEngine.Text = "GitHub" Then 'Code search engines
             Process.Start("https://github.com/search?q=" & Query)
         End If
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
-        If My.Settings.RememberLastSearchEngine = True Then My.Settings.RememberLastSearchEngine_value = ComboBox1.Text
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEngine.SelectedIndexChanged
+        If My.Settings.RememberLastSearchEngine = True Then My.Settings.RememberLastSearchEngine_value = cbEngine.Text
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-        If My.Settings.RememberLastSearchQuery = True Then My.Settings.RememberLastSearchQuery_value = TextBox1.Text
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles txtQuery.TextChanged
+        If My.Settings.RememberLastSearchQuery = True Then My.Settings.RememberLastSearchQuery_value = txtQuery.Text
     End Sub
 
     Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
@@ -85,7 +85,7 @@
         About.ShowDialog()
     End Sub
 
-    Private Sub KeyChecker_Tick(sender As Object, e As EventArgs) Handles KeyChecker.Tick
+    Private Sub KeyChecker_Tick(sender As Object, e As EventArgs) Handles timerKeyChecker.Tick
         If My.Computer.Keyboard.CtrlKeyDown = True And My.Computer.Keyboard.ShiftKeyDown = True Then
             If Me.Visible = True Then
                 Me.Hide()
