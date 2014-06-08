@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class Searchy
     Public version As String = My.Application.Info.Version.ToString & " (pre-release)"
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         version_label_small.Text = version
