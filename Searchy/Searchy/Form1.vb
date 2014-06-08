@@ -6,7 +6,6 @@
             ComboBox1.Text = My.Settings.RememberLastSearchEngine_value.ToString
         End If
         If My.Settings.RememberLastSearchQuery = True Then TextBox1.Text = My.Settings.RememberLastSearchQuery_value
-        ComboBox1.Text = My.Settings.DefaultSerachEngine
         KeyChecker.Start()
     End Sub
 
@@ -24,13 +23,13 @@
 
     Private Sub Search(Query As String)
         If ComboBox1.Text = "Google" Then
-            Process.Start("https://www.google.co.za/search?q=" & Query.ToString)
+            Process.Start("https://www.google.co.za/search?q=" & Query)
         End If
         If ComboBox1.Text = "Yahoo" Then
-            Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query.ToString)
+            Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
         End If
         If ComboBox1.Text = "Bing" Then
-            Process.Start("https://www.bing.com/search?q=" & Query.ToString)
+            Process.Start("https://www.bing.com/search?q=" & Query)
         End If
     End Sub
 
