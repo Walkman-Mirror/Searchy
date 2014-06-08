@@ -39,14 +39,14 @@ Partial Class Form1
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ProjectSiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SourceCodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
         Me.KeyChecker = New System.Windows.Forms.Timer(Me.components)
-        Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.Panel1.SuspendLayout()
         CType(Me.logo_small, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
@@ -123,7 +123,7 @@ Partial Class Form1
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"-Web-", "Google", "Yahoo", "Bing", "DuckDuckGo", "", "-Video-", "YouTube", "", "-Code-", "GitHub"})
+        Me.ComboBox1.Items.AddRange(New Object() {"-Web-", "Google", "Yahoo", "Bing", "DuckDuckGo", "", "-Video-", "YouTube", "Dailymotion", "", "-Code-", "GitHub"})
         Me.ComboBox1.Location = New System.Drawing.Point(347, 114)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(79, 21)
@@ -149,7 +149,7 @@ Partial Class Form1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SubmitFeedbackToolStripMenuItem, Me.ToolStripSeparator3, Me.ProjectSiteToolStripMenuItem, Me.SourceCodeToolStripMenuItem, Me.ToolStripSeparator1, Me.ToolStripMenuItem2, Me.ToolStripMenuItem1, Me.ToolStripSeparator2, Me.PreferencesToolStripMenuItem, Me.HideToolStripMenuItem, Me.ToolStripMenuItem4})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(209, 220)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(209, 198)
         '
         'SubmitFeedbackToolStripMenuItem
         '
@@ -176,6 +176,11 @@ Partial Class Form1
         Me.SourceCodeToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
         Me.SourceCodeToolStripMenuItem.Text = "&Source code"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(205, 6)
+        '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
@@ -190,6 +195,18 @@ Partial Class Form1
         Me.ToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(208, 22)
         Me.ToolStripMenuItem1.Text = "&About Searchy"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(205, 6)
+        '
+        'PreferencesToolStripMenuItem
+        '
+        Me.PreferencesToolStripMenuItem.Image = Global.Searchy.My.Resources.Resources._1402255170_package_settings
+        Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
+        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
+        Me.PreferencesToolStripMenuItem.Text = "&Preferences"
         '
         'HideToolStripMenuItem
         '
@@ -207,23 +224,6 @@ Partial Class Form1
         '
         'KeyChecker
         '
-        '
-        'PreferencesToolStripMenuItem
-        '
-        Me.PreferencesToolStripMenuItem.Image = Global.Searchy.My.Resources.Resources._1402255170_package_settings
-        Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
-        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
-        Me.PreferencesToolStripMenuItem.Text = "&Preferences"
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(205, 6)
-        '
-        'ToolStripSeparator2
-        '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(205, 6)
         '
         'Form1
         '
