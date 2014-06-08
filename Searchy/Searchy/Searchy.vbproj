@@ -46,7 +46,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>1398027695_33852.ico</ApplicationIcon>
+    <ApplicationIcon>images\1398027695_33852.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -129,7 +129,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="1398027695_33852.ico" />
+    <None Include="images\1402255168_redhat-web-browser.png" />
+    <None Include="images\1402255166_susehelpcenter.png" />
+    <None Include="images\1402255170_package_settings.png" />
+    <None Include="images\1398027695_33852.ico" />
+    <None Include="images\1398027694_Search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

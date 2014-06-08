@@ -75,7 +75,7 @@ Partial Class Form1
         '
         'logo_small
         '
-        Me.logo_small.Image = CType(resources.GetObject("logo_small.Image"), System.Drawing.Image)
+        Me.logo_small.Image = Global.Searchy.My.Resources.Resources._1398027694_Search
         Me.logo_small.Location = New System.Drawing.Point(3, 3)
         Me.logo_small.Name = "logo_small"
         Me.logo_small.Size = New System.Drawing.Size(62, 62)

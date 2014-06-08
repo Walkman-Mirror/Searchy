@@ -22,7 +22,6 @@ Partial Class About
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(About))
         Me.licenses_text = New System.Windows.Forms.RichTextBox()
         Me.changelog_text = New System.Windows.Forms.RichTextBox()
         Me.WebBrowser2 = New System.Windows.Forms.WebBrowser()
@@ -170,7 +169,7 @@ Partial Class About
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Image = Global.Searchy.My.Resources.Resources._1398027694_Search
         Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(185, 94)
