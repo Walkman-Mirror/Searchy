@@ -35,6 +35,9 @@
         If ComboBox1.Text = "DuckDuckGo" Then
             Process.Start("https://duckduckgo.com/?q=" & Query)
         End If
+        If ComboBox1.Text = "GitHub" Then
+            Process.Start("https://github.com/search?q=" & Query)
+        End If
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
