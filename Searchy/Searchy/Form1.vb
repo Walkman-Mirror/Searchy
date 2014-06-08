@@ -30,7 +30,7 @@
         If ComboBox1.Text = "DuckDuckGo" Then Process.Start("https://duckduckgo.com/?q=" & Query)
         'Video search engines
         If ComboBox1.Text = "YouTube" Then Process.Start("https://www.youtube.com/results?search_query=" & Query)
-        'Code-related sites with search
+        'Code search engines
         If ComboBox1.Text = "GitHub" Then Process.Start("https://github.com/search?q=" & Query)
     End Sub
 
