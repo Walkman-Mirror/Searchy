@@ -68,10 +68,10 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
-        Public Property RememberLastSearchEngine() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property RememberLastSearchEngine() As Boolean
             Get
-                Return CType(Me("RememberLastSearchEngine"),String)
+                Return CType(Me("RememberLastSearchEngine"),Boolean)
             End Get
             Set
                 Me("RememberLastSearchEngine") = value
@@ -80,10 +80,10 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
-        Public Property RememberLastSearchEngine_value() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property RememberLastSearchEngine_value() As Boolean
             Get
-                Return CType(Me("RememberLastSearchEngine_value"),String)
+                Return CType(Me("RememberLastSearchEngine_value"),Boolean)
             End Get
             Set
                 Me("RememberLastSearchEngine_value") = value
@@ -92,10 +92,10 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
-        Public Property RememberLastSearchQuery() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property RememberLastSearchQuery() As Boolean
             Get
-                Return CType(Me("RememberLastSearchQuery"),String)
+                Return CType(Me("RememberLastSearchQuery"),Boolean)
             End Get
             Set
                 Me("RememberLastSearchQuery") = value
@@ -104,10 +104,10 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
-        Public Property RememberLastSearchQuery_value() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property RememberLastSearchQuery_value() As Boolean
             Get
-                Return CType(Me("RememberLastSearchQuery_value"),String)
+                Return CType(Me("RememberLastSearchQuery_value"),Boolean)
             End Get
             Set
                 Me("RememberLastSearchQuery_value") = value
@@ -116,61 +116,25 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property ShowOpenInBrowserButton() As String
+         Global.System.Configuration.DefaultSettingValueAttribute("False")>  _
+        Public Property TopButtonClosesApp() As Boolean
             Get
-                Return CType(Me("ShowOpenInBrowserButton"),String)
-            End Get
-            Set
-                Me("ShowOpenInBrowserButton") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property ShowResultsPreview() As String
-            Get
-                Return CType(Me("ShowResultsPreview"),String)
-            End Get
-            Set
-                Me("ShowResultsPreview") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
-        Public Property DoubleClickSearchToOpenInBrowser() As String
-            Get
-                Return CType(Me("DoubleClickSearchToOpenInBrowser"),String)
-            End Get
-            Set
-                Me("DoubleClickSearchToOpenInBrowser") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
-        Public Property AlwaysOpenInBrowserWhenSearchIsClicked() As String
-            Get
-                Return CType(Me("AlwaysOpenInBrowserWhenSearchIsClicked"),String)
-            End Get
-            Set
-                Me("AlwaysOpenInBrowserWhenSearchIsClicked") = value
-            End Set
-        End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
-        Public Property TopButtonClosesApp() As String
-            Get
-                Return CType(Me("TopButtonClosesApp"),String)
+                Return CType(Me("TopButtonClosesApp"),Boolean)
             End Get
             Set
                 Me("TopButtonClosesApp") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("100")>  _
+        Public Property KeyCheckerInterval() As Integer
+            Get
+                Return CType(Me("KeyCheckerInterval"),Integer)
+            End Get
+            Set
+                Me("KeyCheckerInterval") = value
             End Set
         End Property
     End Class

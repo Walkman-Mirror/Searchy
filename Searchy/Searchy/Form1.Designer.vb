@@ -122,7 +122,7 @@ Partial Class Form1
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Google", "Yahoo", "Bing"})
+        Me.ComboBox1.Items.AddRange(New Object() {"-Web-", "Google", "Yahoo", "Bing", "DuckDuckGo", "", "-Video-", "YouTube", "", "-Code-", "GitHub"})
         Me.ComboBox1.Location = New System.Drawing.Point(347, 114)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(79, 21)
@@ -163,12 +163,14 @@ Partial Class Form1
         '
         'ProjectSiteToolStripMenuItem
         '
+        Me.ProjectSiteToolStripMenuItem.Image = CType(resources.GetObject("ProjectSiteToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ProjectSiteToolStripMenuItem.Name = "ProjectSiteToolStripMenuItem"
         Me.ProjectSiteToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
         Me.ProjectSiteToolStripMenuItem.Text = "&Project site"
         '
         'SourceCodeToolStripMenuItem
         '
+        Me.SourceCodeToolStripMenuItem.Image = CType(resources.GetObject("SourceCodeToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SourceCodeToolStripMenuItem.Name = "SourceCodeToolStripMenuItem"
         Me.SourceCodeToolStripMenuItem.Size = New System.Drawing.Size(208, 22)
         Me.SourceCodeToolStripMenuItem.Text = "&Source code"
@@ -187,6 +189,7 @@ Partial Class Form1
         '
         'ToolStripMenuItem1
         '
+        Me.ToolStripMenuItem1.Image = Global.Searchy.My.Resources.Resources._1402255166_susehelpcenter
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(208, 22)

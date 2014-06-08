@@ -7,6 +7,7 @@
         End If
         If My.Settings.RememberLastSearchQuery = True Then TextBox1.Text = My.Settings.RememberLastSearchQuery_value
         ComboBox1.Text = My.Settings.DefaultSerachEngine
+        KeyChecker.Interval = My.Settings.KeyCheckerInterval
         KeyChecker.Start()
     End Sub
 

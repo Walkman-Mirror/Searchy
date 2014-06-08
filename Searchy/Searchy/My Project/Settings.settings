@@ -5,32 +5,23 @@
     <Setting Name="DefaultSerachEngine" Type="System.String" Scope="User">
       <Value Profile="(Default)">Google</Value>
     </Setting>
-    <Setting Name="RememberLastSearchEngine" Type="System.String" Scope="User">
-      <Value Profile="(Default)">false</Value>
+    <Setting Name="RememberLastSearchEngine" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="RememberLastSearchEngine_value" Type="System.String" Scope="User">
-      <Value Profile="(Default)">false</Value>
+    <Setting Name="RememberLastSearchEngine_value" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="RememberLastSearchQuery" Type="System.String" Scope="User">
-      <Value Profile="(Default)">false</Value>
+    <Setting Name="RememberLastSearchQuery" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="RememberLastSearchQuery_value" Type="System.String" Scope="User">
-      <Value Profile="(Default)">false</Value>
+    <Setting Name="RememberLastSearchQuery_value" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="ShowOpenInBrowserButton" Type="System.String" Scope="User">
-      <Value Profile="(Default)">true</Value>
+    <Setting Name="TopButtonClosesApp" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="ShowResultsPreview" Type="System.String" Scope="User">
-      <Value Profile="(Default)">true</Value>
-    </Setting>
-    <Setting Name="DoubleClickSearchToOpenInBrowser" Type="System.String" Scope="User">
-      <Value Profile="(Default)">false</Value>
-    </Setting>
-    <Setting Name="AlwaysOpenInBrowserWhenSearchIsClicked" Type="System.String" Scope="User">
-      <Value Profile="(Default)">false</Value>
-    </Setting>
-    <Setting Name="TopButtonClosesApp" Type="System.String" Scope="User">
-      <Value Profile="(Default)">false</Value>
+    <Setting Name="KeyCheckerInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
     </Setting>
   </Settings>
 </SettingsFile>
