@@ -49,27 +49,27 @@
         If My.Settings.RememberLastSearchQuery = True Then My.Settings.RememberLastSearchQuery_value = txtQuery.Text
     End Sub
 
-    Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon1.MouseDoubleClick
+    Private Sub NotifyIcon1_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotificationIcon.MouseDoubleClick
         Me.Show()
     End Sub
 
-    Private Sub ToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem4.Click
+    Private Sub ToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuExit.Click
         Application.Exit()
     End Sub
 
-    Private Sub ProjectSiteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProjectSiteToolStripMenuItem.Click
+    Private Sub ProjectSiteToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuProjectSite.Click
         Process.Start("https://deavmi.github.io/Searchy")
     End Sub
 
-    Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
+    Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles NotificationContextMenu.Opening
         If Me.Visible = True Then
-            HideToolStripMenuItem.Text = "&Hide"
+            NotificationContextMenuHide.Text = "&Hide"
         Else
-            HideToolStripMenuItem.Text = "S&how"
+            NotificationContextMenuHide.Text = "S&how"
         End If
     End Sub
 
-    Private Sub HideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HideToolStripMenuItem.Click
+    Private Sub HideToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuHide.Click
         If Me.Visible = True Then
             Me.Hide()
         Else
@@ -77,11 +77,11 @@
         End If
     End Sub
 
-    Private Sub SubmitFeedbackToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitFeedbackToolStripMenuItem.Click
+    Private Sub SubmitFeedbackToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuSubmitFeedback.Click
         Process.Start("mailto:tristankildaire@gmail.com")
     End Sub
 
-    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem1.Click
+    Private Sub ToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuAbout.Click
         About.ShowDialog()
     End Sub
 

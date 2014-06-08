@@ -24,45 +24,45 @@ Partial Class Searchy
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Searchy))
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.pnlTop = New System.Windows.Forms.Panel()
         Me.lblVersionSmall = New System.Windows.Forms.Label()
-        Me.logo_small = New System.Windows.Forms.PictureBox()
+        Me.imgLogo = New System.Windows.Forms.PictureBox()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.productname_label_small = New System.Windows.Forms.Label()
+        Me.lblProductName = New System.Windows.Forms.Label()
         Me.txtQuery = New System.Windows.Forms.TextBox()
         Me.lblTypeOfSerach = New System.Windows.Forms.Label()
         Me.cbEngine = New System.Windows.Forms.ComboBox()
         Me.btnSearch = New System.Windows.Forms.Button()
-        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.SubmitFeedbackToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ProjectSiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SourceCodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HideToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotificationIcon = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.NotificationContextMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.NotificationContextMenuSubmitFeedback = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotificationContextMenuSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.NotificationContextMenuProjectSite = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotificationContextMenuSourceCode = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotificationContextMenuSeperator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.NotificationContextMenuUpdate = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotificationContextMenuAbout = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotificationContextMenuSeperator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.NotificationContextMenuPreferences = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotificationContextMenuHide = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotificationContextMenuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.timerKeyChecker = New System.Windows.Forms.Timer(Me.components)
-        Me.Panel1.SuspendLayout()
-        CType(Me.logo_small, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip1.SuspendLayout()
+        Me.pnlTop.SuspendLayout()
+        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.NotificationContextMenu.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel1
+        'pnlTop
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.lblVersionSmall)
-        Me.Panel1.Controls.Add(Me.logo_small)
-        Me.Panel1.Controls.Add(Me.btnClose)
-        Me.Panel1.Controls.Add(Me.productname_label_small)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(534, 68)
-        Me.Panel1.TabIndex = 0
+        Me.pnlTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.pnlTop.Controls.Add(Me.lblVersionSmall)
+        Me.pnlTop.Controls.Add(Me.imgLogo)
+        Me.pnlTop.Controls.Add(Me.btnClose)
+        Me.pnlTop.Controls.Add(Me.lblProductName)
+        Me.pnlTop.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTop.Name = "pnlTop"
+        Me.pnlTop.Size = New System.Drawing.Size(534, 68)
+        Me.pnlTop.TabIndex = 0
         '
         'lblVersionSmall
         '
@@ -74,15 +74,15 @@ Partial Class Searchy
         Me.lblVersionSmall.TabIndex = 1
         Me.lblVersionSmall.Text = "version"
         '
-        'logo_small
+        'imgLogo
         '
-        Me.logo_small.Image = Global.Searchy.My.Resources.Resources._1398027694_Search
-        Me.logo_small.Location = New System.Drawing.Point(3, 3)
-        Me.logo_small.Name = "logo_small"
-        Me.logo_small.Size = New System.Drawing.Size(62, 62)
-        Me.logo_small.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.logo_small.TabIndex = 3
-        Me.logo_small.TabStop = False
+        Me.imgLogo.Image = Global.Searchy.My.Resources.Resources._1398027694_Search
+        Me.imgLogo.Location = New System.Drawing.Point(3, 3)
+        Me.imgLogo.Name = "imgLogo"
+        Me.imgLogo.Size = New System.Drawing.Size(62, 62)
+        Me.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.imgLogo.TabIndex = 3
+        Me.imgLogo.TabStop = False
         '
         'btnClose
         '
@@ -93,16 +93,16 @@ Partial Class Searchy
         Me.btnClose.Text = "&X"
         Me.btnClose.UseVisualStyleBackColor = True
         '
-        'productname_label_small
+        'lblProductName
         '
-        Me.productname_label_small.AutoSize = True
-        Me.productname_label_small.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.productname_label_small.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.productname_label_small.Location = New System.Drawing.Point(67, 20)
-        Me.productname_label_small.Name = "productname_label_small"
-        Me.productname_label_small.Size = New System.Drawing.Size(122, 33)
-        Me.productname_label_small.TabIndex = 0
-        Me.productname_label_small.Text = "Searchy"
+        Me.lblProductName.AutoSize = True
+        Me.lblProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblProductName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblProductName.Location = New System.Drawing.Point(67, 20)
+        Me.lblProductName.Name = "lblProductName"
+        Me.lblProductName.Size = New System.Drawing.Size(122, 33)
+        Me.lblProductName.TabIndex = 0
+        Me.lblProductName.Text = "Searchy"
         '
         'txtQuery
         '
@@ -138,89 +138,89 @@ Partial Class Searchy
         Me.btnSearch.Text = "&Search"
         Me.btnSearch.UseVisualStyleBackColor = True
         '
-        'NotifyIcon1
+        'NotificationIcon
         '
-        Me.NotifyIcon1.ContextMenuStrip = Me.ContextMenuStrip1
-        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
-        Me.NotifyIcon1.Text = "Searchy"
-        Me.NotifyIcon1.Visible = True
+        Me.NotificationIcon.ContextMenuStrip = Me.NotificationContextMenu
+        Me.NotificationIcon.Icon = CType(resources.GetObject("NotificationIcon.Icon"), System.Drawing.Icon)
+        Me.NotificationIcon.Text = "Searchy"
+        Me.NotificationIcon.Visible = True
         '
-        'ContextMenuStrip1
+        'NotificationContextMenu
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SubmitFeedbackToolStripMenuItem, Me.ToolStripSeparator3, Me.ProjectSiteToolStripMenuItem, Me.SourceCodeToolStripMenuItem, Me.ToolStripSeparator1, Me.ToolStripMenuItem2, Me.ToolStripMenuItem1, Me.ToolStripSeparator2, Me.PreferencesToolStripMenuItem, Me.HideToolStripMenuItem, Me.ToolStripMenuItem4})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(220, 220)
+        Me.NotificationContextMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NotificationContextMenuSubmitFeedback, Me.NotificationContextMenuSeparator3, Me.NotificationContextMenuProjectSite, Me.NotificationContextMenuSourceCode, Me.NotificationContextMenuSeperator1, Me.NotificationContextMenuUpdate, Me.NotificationContextMenuAbout, Me.NotificationContextMenuSeperator2, Me.NotificationContextMenuPreferences, Me.NotificationContextMenuHide, Me.NotificationContextMenuExit})
+        Me.NotificationContextMenu.Name = "ContextMenuStrip1"
+        Me.NotificationContextMenu.Size = New System.Drawing.Size(220, 198)
         '
-        'SubmitFeedbackToolStripMenuItem
+        'NotificationContextMenuSubmitFeedback
         '
-        Me.SubmitFeedbackToolStripMenuItem.Name = "SubmitFeedbackToolStripMenuItem"
-        Me.SubmitFeedbackToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
-        Me.SubmitFeedbackToolStripMenuItem.Text = "S&ubmit feedback"
+        Me.NotificationContextMenuSubmitFeedback.Name = "NotificationContextMenuSubmitFeedback"
+        Me.NotificationContextMenuSubmitFeedback.Size = New System.Drawing.Size(219, 22)
+        Me.NotificationContextMenuSubmitFeedback.Text = "S&ubmit feedback"
         '
-        'ToolStripSeparator3
+        'NotificationContextMenuSeparator3
         '
-        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
-        Me.ToolStripSeparator3.Size = New System.Drawing.Size(216, 6)
+        Me.NotificationContextMenuSeparator3.Name = "NotificationContextMenuSeparator3"
+        Me.NotificationContextMenuSeparator3.Size = New System.Drawing.Size(216, 6)
         '
-        'ProjectSiteToolStripMenuItem
+        'NotificationContextMenuProjectSite
         '
-        Me.ProjectSiteToolStripMenuItem.Image = CType(resources.GetObject("ProjectSiteToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ProjectSiteToolStripMenuItem.Name = "ProjectSiteToolStripMenuItem"
-        Me.ProjectSiteToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
-        Me.ProjectSiteToolStripMenuItem.Text = "&Project site"
+        Me.NotificationContextMenuProjectSite.Image = CType(resources.GetObject("NotificationContextMenuProjectSite.Image"), System.Drawing.Image)
+        Me.NotificationContextMenuProjectSite.Name = "NotificationContextMenuProjectSite"
+        Me.NotificationContextMenuProjectSite.Size = New System.Drawing.Size(219, 22)
+        Me.NotificationContextMenuProjectSite.Text = "&Project site"
         '
-        'SourceCodeToolStripMenuItem
+        'NotificationContextMenuSourceCode
         '
-        Me.SourceCodeToolStripMenuItem.Image = CType(resources.GetObject("SourceCodeToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.SourceCodeToolStripMenuItem.Name = "SourceCodeToolStripMenuItem"
-        Me.SourceCodeToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
-        Me.SourceCodeToolStripMenuItem.Text = "&Source code"
+        Me.NotificationContextMenuSourceCode.Image = CType(resources.GetObject("NotificationContextMenuSourceCode.Image"), System.Drawing.Image)
+        Me.NotificationContextMenuSourceCode.Name = "NotificationContextMenuSourceCode"
+        Me.NotificationContextMenuSourceCode.Size = New System.Drawing.Size(219, 22)
+        Me.NotificationContextMenuSourceCode.Text = "&Source code"
         '
-        'ToolStripSeparator1
+        'NotificationContextMenuSeperator1
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(216, 6)
+        Me.NotificationContextMenuSeperator1.Name = "NotificationContextMenuSeperator1"
+        Me.NotificationContextMenuSeperator1.Size = New System.Drawing.Size(216, 6)
         '
-        'ToolStripMenuItem2
+        'NotificationContextMenuUpdate
         '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(219, 22)
-        Me.ToolStripMenuItem2.Text = "&Check for updates"
+        Me.NotificationContextMenuUpdate.Name = "NotificationContextMenuUpdate"
+        Me.NotificationContextMenuUpdate.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.NotificationContextMenuUpdate.Size = New System.Drawing.Size(219, 22)
+        Me.NotificationContextMenuUpdate.Text = "&Check for updates"
         '
-        'ToolStripMenuItem1
+        'NotificationContextMenuAbout
         '
-        Me.ToolStripMenuItem1.Image = Global.Searchy.My.Resources.Resources._1402255166_susehelpcenter
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(219, 22)
-        Me.ToolStripMenuItem1.Text = "&About Searchy"
+        Me.NotificationContextMenuAbout.Image = Global.Searchy.My.Resources.Resources._1402255166_susehelpcenter
+        Me.NotificationContextMenuAbout.Name = "NotificationContextMenuAbout"
+        Me.NotificationContextMenuAbout.ShortcutKeys = System.Windows.Forms.Keys.F1
+        Me.NotificationContextMenuAbout.Size = New System.Drawing.Size(219, 22)
+        Me.NotificationContextMenuAbout.Text = "&About Searchy"
         '
-        'ToolStripSeparator2
+        'NotificationContextMenuSeperator2
         '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(216, 6)
+        Me.NotificationContextMenuSeperator2.Name = "NotificationContextMenuSeperator2"
+        Me.NotificationContextMenuSeperator2.Size = New System.Drawing.Size(216, 6)
         '
-        'PreferencesToolStripMenuItem
+        'NotificationContextMenuPreferences
         '
-        Me.PreferencesToolStripMenuItem.Image = Global.Searchy.My.Resources.Resources._1402255170_package_settings
-        Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
-        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
-        Me.PreferencesToolStripMenuItem.Text = "&Preferences"
+        Me.NotificationContextMenuPreferences.Image = Global.Searchy.My.Resources.Resources._1402255170_package_settings
+        Me.NotificationContextMenuPreferences.Name = "NotificationContextMenuPreferences"
+        Me.NotificationContextMenuPreferences.Size = New System.Drawing.Size(219, 22)
+        Me.NotificationContextMenuPreferences.Text = "&Preferences"
         '
-        'HideToolStripMenuItem
+        'NotificationContextMenuHide
         '
-        Me.HideToolStripMenuItem.Name = "HideToolStripMenuItem"
-        Me.HideToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
-        Me.HideToolStripMenuItem.Size = New System.Drawing.Size(219, 22)
-        Me.HideToolStripMenuItem.Text = "&Hide"
+        Me.NotificationContextMenuHide.Name = "NotificationContextMenuHide"
+        Me.NotificationContextMenuHide.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
+        Me.NotificationContextMenuHide.Size = New System.Drawing.Size(219, 22)
+        Me.NotificationContextMenuHide.Text = "&Hide"
         '
-        'ToolStripMenuItem4
+        'NotificationContextMenuExit
         '
-        Me.ToolStripMenuItem4.Name = "ToolStripMenuItem4"
-        Me.ToolStripMenuItem4.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
-        Me.ToolStripMenuItem4.Size = New System.Drawing.Size(219, 22)
-        Me.ToolStripMenuItem4.Text = "&Exit"
+        Me.NotificationContextMenuExit.Name = "NotificationContextMenuExit"
+        Me.NotificationContextMenuExit.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
+        Me.NotificationContextMenuExit.Size = New System.Drawing.Size(219, 22)
+        Me.NotificationContextMenuExit.Text = "&Exit"
         '
         'timerKeyChecker
         '
@@ -234,43 +234,43 @@ Partial Class Searchy
         Me.Controls.Add(Me.cbEngine)
         Me.Controls.Add(Me.lblTypeOfSerach)
         Me.Controls.Add(Me.txtQuery)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.pnlTop)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Searchy"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Searchy"
         Me.TopMost = True
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        CType(Me.logo_small, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip1.ResumeLayout(False)
+        Me.pnlTop.ResumeLayout(False)
+        Me.pnlTop.PerformLayout()
+        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.NotificationContextMenu.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents productname_label_small As System.Windows.Forms.Label
+    Friend WithEvents pnlTop As System.Windows.Forms.Panel
+    Friend WithEvents lblProductName As System.Windows.Forms.Label
     Friend WithEvents lblVersionSmall As System.Windows.Forms.Label
     Friend WithEvents txtQuery As System.Windows.Forms.TextBox
     Friend WithEvents lblTypeOfSerach As System.Windows.Forms.Label
     Friend WithEvents cbEngine As System.Windows.Forms.ComboBox
     Friend WithEvents btnSearch As System.Windows.Forms.Button
     Friend WithEvents btnClose As System.Windows.Forms.Button
-    Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
-    Friend WithEvents logo_small As System.Windows.Forms.PictureBox
-    Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents HideToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripMenuItem4 As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ProjectSiteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SourceCodeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SubmitFeedbackToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents NotificationIcon As System.Windows.Forms.NotifyIcon
+    Friend WithEvents imgLogo As System.Windows.Forms.PictureBox
+    Friend WithEvents NotificationContextMenu As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents NotificationContextMenuUpdate As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NotificationContextMenuAbout As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NotificationContextMenuHide As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NotificationContextMenuExit As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NotificationContextMenuProjectSite As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NotificationContextMenuSourceCode As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NotificationContextMenuSubmitFeedback As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NotificationContextMenuSeparator3 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents timerKeyChecker As System.Windows.Forms.Timer
-    Friend WithEvents PreferencesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents NotificationContextMenuPreferences As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NotificationContextMenuSeperator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents NotificationContextMenuSeperator2 As System.Windows.Forms.ToolStripSeparator
 
 End Class
