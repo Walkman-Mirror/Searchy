@@ -23,7 +23,7 @@
     End Sub
 
     Private Sub Search(Query As String)
-        'Search engines - Websites
+        'Site search engines
         If ComboBox1.Text = "Google" Then Process.Start("https://www.google.co.za/search?q=" & Query)
         If ComboBox1.Text = "Yahoo" Then Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
         If ComboBox1.Text = "Bing" Then Process.Start("https://www.bing.com/search?q=" & Query)
