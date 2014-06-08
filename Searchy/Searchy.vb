@@ -24,15 +24,21 @@
 
     Private Sub Search(Query As String)
         'Site search engines
-        If ComboBox1.Text = "Google" Then Process.Start("https://www.google.co.za/search?q=" & Query)
-        If ComboBox1.Text = "Yahoo" Then Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
-        If ComboBox1.Text = "Bing" Then Process.Start("https://www.bing.com/search?q=" & Query)
-        If ComboBox1.Text = "DuckDuckGo" Then Process.Start("https://duckduckgo.com/?q=" & Query)
-        'Video search engines
-        If ComboBox1.Text = "YouTube" Then Process.Start("https://www.youtube.com/results?search_query=" & Query)
-        If ComboBox1.Text = "Dailymotion" Then Process.Start("https://www.dailymotion.com/en/relevance/search/" & Query)
-        'Code search engines
-        If ComboBox1.Text = "GitHub" Then Process.Start("https://github.com/search?q=" & Query)
+        If ComboBox1.Text = "Google" Then
+            Process.Start("Process.Start("https://www.google.co.za/search?q=" & Query)")
+        ElseIf ComboBox1.Text = "Yahoo" Then
+            Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
+        ElseIf ComboBox1.Text = "Bing" Then
+            Process.Start("https://www.bing.com/search?q=" & Query)
+        ElseIf ComboBox1.Text = "DuckDuckGo" Then
+            Process.Start("https://duckduckgo.com/?q=" & Query)
+        ElseIf ComboBox1.Text = "YouTube" Then 'Video search engines
+            Process.Start("https://www.youtube.com/results?search_query=" & Query)
+        ElseIf ComboBox1.Text = "Dailymotion" Then
+            Process.Start("https://www.dailymotion.com/en/relevance/search/" & Query)
+        ElseIf ComboBox1.Text = "GitHub" Then 'Code search engines
+            Process.Start("https://github.com/search?q=" & Query)
+        End If
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
