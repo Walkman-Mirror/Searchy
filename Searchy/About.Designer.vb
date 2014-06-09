@@ -278,7 +278,6 @@ Partial Class About
         Me.MinimizeBox = False
         Me.Name = "About"
         Me.ShowIcon = False
-        Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "About Searchy"
         Me.TabPage2.ResumeLayout(False)
