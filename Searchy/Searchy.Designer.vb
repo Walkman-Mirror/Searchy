@@ -123,7 +123,7 @@ Partial Class Searchy
         'cbEngine
         '
         Me.cbEngine.FormattingEnabled = True
-        Me.cbEngine.Items.AddRange(New Object() {"-Web-", "Google", "Yahoo", "Bing", "DuckDuckGo", "", "-Video-", "YouTube", "Dailymotion", "", "-Music-", "", "SoundCloud", "", "-Code-", "GitHub"})
+        Me.cbEngine.Items.AddRange(New Object() {"-Web-", "Google", "Yahoo", "Bing", "DuckDuckGo", "", "-Video-", "YouTube", "Dailymotion", "", "-Music-", "", "SoundCloud", "", "-Code-", "GitHub", "Bitbucket"})
         Me.cbEngine.Location = New System.Drawing.Point(347, 114)
         Me.cbEngine.Name = "cbEngine"
         Me.cbEngine.Size = New System.Drawing.Size(79, 21)
