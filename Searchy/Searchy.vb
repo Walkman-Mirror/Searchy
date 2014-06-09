@@ -22,7 +22,9 @@
 
     Private Sub Search(Query As String)
         'Site search engines
-        If cbEngine.Text = "Google" Then
+        If txtQuery.Text = "" Then
+            'idk do nothing ;D
+        ElseIf cbEngine.Text = "Google" Then
             Process.Start("https://www.google.co.za/search?q=" & Query & "&qscrl=1")
         ElseIf cbEngine.Text = "Yahoo" Then
             Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
@@ -34,6 +36,8 @@
             Process.Start("https://www.youtube.com/results?search_query=" & Query)
         ElseIf cbEngine.Text = "Dailymotion" Then
             Process.Start("https://www.dailymotion.com/en/relevance/search/" & Query)
+        ElseIf cbEngine.Text = "SoundCloud" Then
+            Process.Start("https://soundcloud.com/search?q=" & Query)
         ElseIf cbEngine.Text = "GitHub" Then 'Code search engines
             Process.Start("https://github.com/search?q=" & Query)
         End If
