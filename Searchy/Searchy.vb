@@ -2,9 +2,7 @@
     Public version As String = My.Application.Info.Version.ToString & " (pre-release)"
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblVersionSmall.Text = version
-        If My.Settings.RememberLastSearchEngine = True Then
-            cbEngine.Text = My.Settings.RememberLastSearchEngine_value.ToString
-        End If
+        If My.Settings.RememberLastSearchEngine = True Then cbEngine.Text = My.Settings.RememberLastSearchEngine_value
         If My.Settings.RememberLastSearchQuery = True Then txtQuery.Text = My.Settings.RememberLastSearchQuery_value
         cbEngine.Text = My.Settings.DefaultSerachEngine
         timerKeyChecker.Start()
