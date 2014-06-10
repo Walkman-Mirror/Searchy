@@ -40,6 +40,8 @@
             Process.Start("https://soundcloud.com/search?q=" & Query)
         ElseIf cbEngine.Text = "Beatport" Then
             Process.Start("http://www.beatport.com/search?query=" & Query)
+        ElseIf cbEngine.Text = "Wikipedia" Then
+            Process.Start("https://en.wikipedia.org/wiki/" & Query)
         ElseIf cbEngine.Text = "GitHub" Then 'Code search engines
             Process.Start("https://github.com/search?q=" & Query)
         ElseIf cbEngine.Text = "Bitbucket" Then
