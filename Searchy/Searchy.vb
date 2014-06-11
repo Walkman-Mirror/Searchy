@@ -66,31 +66,53 @@
     End Sub
 
     Private Sub Search(Query As String)
-        'Site search engines
         If txtQuery.Text = "" Then
-            'idk do nothing ;D
-        ElseIf cbEngine.Text = "Google" Then
+            ' == Web ==
+        ElseIf cbEngine.Text = "Google" Then 'Google
             Process.Start("https://www.google.co.za/search?q=" & Query & "&qscrl=1")
-        ElseIf cbEngine.Text = "Yahoo" Then
+        ElseIf cbEngine.Text = "Yahoo" Then 'Yahoo
             Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
-        ElseIf cbEngine.Text = "Bing" Then
+        ElseIf cbEngine.Text = "Bing" Then 'Bing
             Process.Start("https://www.bing.com/search?q=" & Query)
-        ElseIf cbEngine.Text = "DuckDuckGo" Then
+        ElseIf cbEngine.Text = "DuckDuckGo" Then 'DuckDuckGo
             Process.Start("https://duckduckgo.com/?q=" & Query)
-        ElseIf cbEngine.Text = "YouTube" Then 'Video search engines
-            Process.Start("https://www.youtube.com/results?search_query=" & Query)
-        ElseIf cbEngine.Text = "Dailymotion" Then
-            Process.Start("https://www.dailymotion.com/en/relevance/search/" & Query)
-        ElseIf cbEngine.Text = "SoundCloud" Then
+            ' == Images ==
+        ElseIf cbEngine.Text = "Google Image search" Then 'Google Image Search
+            Process.Start("https://www.google.com/search?newwindow=1&site=&tbm=isch&source=hp&biw=1360&bih=621&q=" & Query & "&btnG=Search+by+image&oq=&gs_l=")
+            ' == Music ==
+        ElseIf cbEngine.Text = "SoundCloud" Then 'SoundCloud
             Process.Start("https://soundcloud.com/search?q=" & Query)
-        ElseIf cbEngine.Text = "Beatport" Then
+        ElseIf cbEngine.Text = "Beatport" Then 'Beatport
             Process.Start("http://www.beatport.com/search?query=" & Query)
-        ElseIf cbEngine.Text = "Wikipedia" Then
+            ' == Video ==
+        ElseIf cbEngine.Text = "YouTube" Then 'YouTube
+            Process.Start("https://www.youtube.com/results?search_query=" & Query)
+        ElseIf cbEngine.Text = "Dailymotion" Then 'Dailymotion
+            Process.Start("https://www.dailymotion.com/en/relevance/search/" & Query)
+        ElseIf cbEngine.Text = "Google Video Search" Then 'Google Video Search
+            Process.Start("https://www.google.com/search?tbm=vid&hl=en&source=hp&biw=&bih=&q=" & Query & "&btnG=Google+Search&gbv=2&oq=&gs_l=")
+            ' == Info ==
+        ElseIf cbEngine.Text = "Wikipedia" Then 'Wikipedia
             Process.Start("https://en.wikipedia.org/wiki/" & Query)
-        ElseIf cbEngine.Text = "GitHub" Then 'Code search engines
+        ElseIf cbEngine.Text = "Newsgrounds" Then 'Newsgrounds
+            Process.Start("http://www.newgrounds.com/search?topsearch_text=" & Query & "&topsearch_type=15")
+            ' == Products ==
+        ElseIf cbEngine.Text = "eBay" Then 'eBay
+            Process.Start("http://www.ebay.com/sch/i.html?_trksid=p2050601.m570.l1313&_nkw=" & Query & "&_sacat=0&_from=R40")
+        ElseIf cbEngine.Text = "Amazon" Then 'Amazon
+            Process.Start("http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=" & Query)
+            ' == Code ==
+        ElseIf cbEngine.Text = "GitHub" Then 'GitHub
             Process.Start("https://github.com/search?q=" & Query)
-        ElseIf cbEngine.Text = "Bitbucket" Then
+        ElseIf cbEngine.Text = "Bitbucket" Then 'Bitbucket
             Process.Start("https://bitbucket.org/" & Query)
+        ElseIf cbEngine.Text = "Superuser" Then 'Stack Overflow
+            Process.Start("https://stackoverflow.com/search?q=" & Query)
+        ElseIf cbEngine.Text = "Super User" Then 'Super User
+            Process.Start("https://superuser.com/search?q=" & Query)
+        ElseIf cbEngine.Text = "Stack Exchange" Then 'Stack Exchange
+            Process.Start("https://stackexchange.com/search?q=" & Query)
+
         End If
     End Sub
 
