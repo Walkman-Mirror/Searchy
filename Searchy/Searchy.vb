@@ -3,11 +3,13 @@
     'Public declarations
     Public version As String = My.Application.Info.Version.ToString & " (pre-release)"
 
+    'window-related stuff
+
     Private Sub Searchy_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblVersionSmall.Text = version
         If My.Settings.RememberLastSearchEngine = True Then cbEngine.Text = My.Settings.RememberLastSearchEngine_value
         If My.Settings.RememberLastSearchQuery = True Then txtQuery.Text = My.Settings.RememberLastSearchQuery_value
-        cbEngine.Text = My.Settings.DefaultSerachEngine
+        cbEngine.Text = My.Settings.DefaultSearchEngine
         timerKeyChecker.Start()
     End Sub
 
@@ -18,6 +20,46 @@
             Application.Exit()
         End If
     End Sub
+
+    Private Sub NotificationIcon_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotificationIcon.MouseDoubleClick
+        Me.Show()
+    End Sub
+
+    Private Sub NotificationContextMenuExit_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuExit.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub NotificationContextMenu_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles NotificationContextMenu.Opening
+        If Me.Visible = True Then
+            NotificationContextMenuHide.Text = "&Hide"
+        Else
+            NotificationContextMenuHide.Text = "S&how"
+        End If
+    End Sub
+
+    Private Sub NotificationContextMenuHide_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuHide.Click
+        If Me.Visible = True Then
+            Me.Hide()
+        Else
+            Me.Show()
+        End If
+    End Sub
+
+    Private Sub NotificationContextMenuAbout_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuAbout.Click
+        About.ShowDialog()
+    End Sub
+
+    Private Sub timerKeyChecker_Tick(sender As Object, e As EventArgs) Handles timerKeyChecker.Tick
+        If My.Computer.Keyboard.CtrlKeyDown = True And My.Computer.Keyboard.ShiftKeyDown = True Then
+            If Me.Visible = True Then
+                Me.Hide()
+            Else
+                Me.Show()
+            End If
+        End If
+    End Sub
+
+    'start searches
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
         Search(Query:=txtQuery.Text)
@@ -52,6 +94,8 @@
         End If
     End Sub
 
+    'settings
+
     Private Sub cbEngine_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEngine.SelectedIndexChanged
         If My.Settings.RememberLastSearchEngine = True Then My.Settings.RememberLastSearchEngine_value = cbEngine.Text
     End Sub
@@ -60,49 +104,14 @@
         If My.Settings.RememberLastSearchQuery = True Then My.Settings.RememberLastSearchQuery_value = txtQuery.Text
     End Sub
 
-    Private Sub NotificationIcon_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotificationIcon.MouseDoubleClick
-        Me.Show()
-    End Sub
-
-    Private Sub NotificationContextMenuExit_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuExit.Click
-        Application.Exit()
-    End Sub
+    'links
 
     Private Sub NotificationContextMenuProjectSite_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuProjectSite.Click
         Process.Start("https://deavmi.github.io/Searchy")
-    End Sub
-
-    Private Sub NotificationContextMenu_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles NotificationContextMenu.Opening
-        If Me.Visible = True Then
-            NotificationContextMenuHide.Text = "&Hide"
-        Else
-            NotificationContextMenuHide.Text = "S&how"
-        End If
-    End Sub
-
-    Private Sub NotificationContextMenuHide_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuHide.Click
-        If Me.Visible = True Then
-            Me.Hide()
-        Else
-            Me.Show()
-        End If
     End Sub
 
     Private Sub NotificationContextMenuSubmitFeedback_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuSubmitFeedback.Click
         Process.Start("https://github.com/deavmi/Searchy/issues/new")
     End Sub
 
-    Private Sub NotificationContextMenuAbout_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuAbout.Click
-        About.ShowDialog()
-    End Sub
-
-    Private Sub timerKeyChecker_Tick(sender As Object, e As EventArgs) Handles timerKeyChecker.Tick
-        If My.Computer.Keyboard.CtrlKeyDown = True And My.Computer.Keyboard.ShiftKeyDown = True Then
-            If Me.Visible = True Then
-                Me.Hide()
-            Else
-                Me.Show()
-            End If
-        End If
-    End Sub
 End Class
