@@ -79,7 +79,7 @@
             ' == Images ==
         ElseIf cbEngine.Text = "Google Images" Then 'Google Image Search
             Process.Start("https://www.google.com/search?newwindow=1&site=&tbm=isch&source=hp&biw=1360&bih=621&q=" & Query & "&btnG=Search+by+image&oq=&gs_l=")
-        ElseIf cbEngine.Text = "Bing Images" Then
+        ElseIf cbEngine.Text = "Bing Images" Then 'Bing Image Search
             Process.Start("http://www.bing.com/images/search?q=" & Query)
             ' == Music ==
         ElseIf cbEngine.Text = "SoundCloud" Then 'SoundCloud
@@ -93,7 +93,7 @@
             Process.Start("https://www.dailymotion.com/en/relevance/search/" & Query)
         ElseIf cbEngine.Text = "Google Videos" Then 'Google Video Search
             Process.Start("https://www.google.com/search?tbm=vid&hl=en&source=hp&biw=&bih=&q=" & Query & "&btnG=Google+Search&gbv=2&oq=&gs_l=")
-        ElseIf cbEngine.Text = "Bing Videos" Then
+        ElseIf cbEngine.Text = "Bing Videos" Then 'Bing Video Search
             Process.Start("http://www.bing.com/videos/search?q=" & Query)
             ' == Maps ==
         ElseIf cbEngine.Text = "Google Maps" Then
@@ -101,7 +101,7 @@
             ' == Info ==
         ElseIf cbEngine.Text = "Wikipedia" Then 'Wikipedia
             Process.Start("https://en.wikipedia.org/wiki/" & Query)
-        ElseIf cbEngine.Text = "Newsgrounds" Then 'Newsgrounds
+        ElseIf cbEngine.Text = "Newgrounds" Then 'Newgrounds
             Process.Start("http://www.newgrounds.com/search?topsearch_text=" & Query & "&topsearch_type=15")
             ' == Products ==
         ElseIf cbEngine.Text = "eBay" Then 'eBay
