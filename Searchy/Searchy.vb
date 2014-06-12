@@ -77,9 +77,9 @@
         ElseIf cbEngine.Text = "DuckDuckGo" Then 'DuckDuckGo
             Process.Start("https://duckduckgo.com/?q=" & Query)
             ' == Images ==
-        ElseIf cbEngine.Text = "Google Image search" Then 'Google Image Search
+        ElseIf cbEngine.Text = "Google Image Search" Then 'Google Image Search
             Process.Start("https://www.google.com/search?newwindow=1&site=&tbm=isch&source=hp&biw=1360&bih=621&q=" & Query & "&btnG=Search+by+image&oq=&gs_l=")
-        ElseIf cbEngine.Text = "Bing Image search"
+        ElseIf cbEngine.Text = "Bing Image Search"
             Process.Start("http://www.bing.com/images/search?q=" & Query)
             ' == Music ==
         ElseIf cbEngine.Text = "SoundCloud" Then 'SoundCloud
@@ -93,6 +93,8 @@
             Process.Start("https://www.dailymotion.com/en/relevance/search/" & Query)
         ElseIf cbEngine.Text = "Google Video Search" Then 'Google Video Search
             Process.Start("https://www.google.com/search?tbm=vid&hl=en&source=hp&biw=&bih=&q=" & Query & "&btnG=Google+Search&gbv=2&oq=&gs_l=")
+        ElseIf cbEngine.Text = "Bing Video Search"
+            Process.Start("http://www.bing.com/videos/search?q=" & Query)
             ' == Maps ==
         ElseIf cbEngine.Text = "Google Maps" Then
             Process.Start("https://www.google.com/maps/place/" & Query)
