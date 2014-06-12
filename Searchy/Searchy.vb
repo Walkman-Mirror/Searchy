@@ -79,6 +79,8 @@
             ' == Images ==
         ElseIf cbEngine.Text = "Google Image search" Then 'Google Image Search
             Process.Start("https://www.google.com/search?newwindow=1&site=&tbm=isch&source=hp&biw=1360&bih=621&q=" & Query & "&btnG=Search+by+image&oq=&gs_l=")
+        ElseIf cbEngine.Text = "Bing Image search"
+            Process.Start("http://www.bing.com/images/search?q=" & Query)
             ' == Music ==
         ElseIf cbEngine.Text = "SoundCloud" Then 'SoundCloud
             Process.Start("https://soundcloud.com/search?q=" & Query)
@@ -91,6 +93,9 @@
             Process.Start("https://www.dailymotion.com/en/relevance/search/" & Query)
         ElseIf cbEngine.Text = "Google Video Search" Then 'Google Video Search
             Process.Start("https://www.google.com/search?tbm=vid&hl=en&source=hp&biw=&bih=&q=" & Query & "&btnG=Google+Search&gbv=2&oq=&gs_l=")
+            ' == Maps ==
+        ElseIf cbEngine.Text = "Google Maps" Then
+            Process.Start("https://www.google.com/maps/place/" & Query)
             ' == Info ==
         ElseIf cbEngine.Text = "Wikipedia" Then 'Wikipedia
             Process.Start("https://en.wikipedia.org/wiki/" & Query)
