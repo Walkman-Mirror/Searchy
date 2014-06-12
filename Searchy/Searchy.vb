@@ -106,7 +106,7 @@
             Process.Start("https://github.com/search?q=" & Query)
         ElseIf cbEngine.Text = "Bitbucket" Then 'Bitbucket
             Process.Start("https://bitbucket.org/" & Query)
-        ElseIf cbEngine.Text = "Superuser" Then 'Stack Overflow
+        ElseIf cbEngine.Text = "Stack Overflow" Then 'Stack Overflow
             Process.Start("https://stackoverflow.com/search?q=" & Query)
         ElseIf cbEngine.Text = "Super User" Then 'Super User
             Process.Start("https://superuser.com/search?q=" & Query)
