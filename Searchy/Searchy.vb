@@ -95,6 +95,9 @@
             Process.Start("https://www.google.com/search?tbm=vid&hl=en&source=hp&biw=&bih=&q=" & Query & "&btnG=Google+Search&gbv=2&oq=&gs_l=")
         ElseIf cbEngine.Text = "Bing Videos" Then 'Bing Video Search
             Process.Start("http://www.bing.com/videos/search?q=" & Query)
+            ' == Social ==
+        ElseIf cbEngine.Text = "Reddit" Then 'Reddit
+            Process.Start("" & Query)
             ' == Maps ==
         ElseIf cbEngine.Text = "Google Maps" Then
             Process.Start("https://www.google.com/maps/place/" & Query)
