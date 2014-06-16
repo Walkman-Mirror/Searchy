@@ -97,7 +97,7 @@
             Process.Start("http://www.bing.com/videos/search?q=" & Query)
             ' == Social ==
         ElseIf cbEngine.Text = "Reddit" Then 'Reddit
-            Process.Start("" & Query)
+            Process.Start("http://www.reddit.com/search?q=" & Query)
             ' == Maps ==
         ElseIf cbEngine.Text = "Google Maps" Then
             Process.Start("https://www.google.com/maps/place/" & Query)
