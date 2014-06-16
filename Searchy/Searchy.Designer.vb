@@ -124,7 +124,7 @@ Partial Class Searchy
         '
         Me.cbEngine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbEngine.FormattingEnabled = True
-        Me.cbEngine.Items.AddRange(New Object() {" == Web ==", "Google", "Yahoo", "Bing", "DuckDuckGo", " == Images ==", "Google Images", "Bing Images", " == Music ==", "SoundCloud", "Beatport", " == Video ==", "YouTube", "Dailymotion", "Google Videos", "Bing Videos", " == Info ==", "Wikipedia", "Newsgrounds", " == Products ==", "eBay", "Amazon", " == Code ==", "GitHub", "Bitbucket", "Stack Overflow", "Super User", "Stack Exchange"})
+        Me.cbEngine.Items.AddRange(New Object() {" == Web ==", "Google", "Yahoo", "Bing", "DuckDuckGo", " == Images ==", "Google Images", "Bing Images", " == Music ==", "SoundCloud", "Beatport", " == Video ==", "YouTube", "Dailymotion", "Google Videos", "Bing Videos", "== Social ==", "Reddit", "== Entertainment ==", "Newgrounds", " == Info ==", "Wikipedia", " == Products ==", "eBay", "Amazon", " == Code ==", "GitHub", "Bitbucket", "Stack Overflow", "Super User", "Stack Exchange"})
         Me.cbEngine.Location = New System.Drawing.Point(347, 114)
         Me.cbEngine.Name = "cbEngine"
         Me.cbEngine.Size = New System.Drawing.Size(79, 21)
