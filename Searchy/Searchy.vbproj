@@ -118,6 +118,9 @@
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Preferences.resx">
+      <DependentUpon>Preferences.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Searchy.resx">
       <DependentUpon>Searchy.vb</DependentUpon>
     </EmbeddedResource>
