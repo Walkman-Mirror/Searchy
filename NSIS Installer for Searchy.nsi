@@ -1,0 +1,101 @@
+; Searchy Installer NSIS Script
+; get NSIS at http://tenet.dl.sourceforge.net/project/nsis/NSIS%202/2.46/nsis-2.46-setup.exe
+; As a program that all Power PC users should have, Notepad ++ is recommended to edit this file
+
+AddBrandingImage top 20
+Icon Searchy\youtube_withLink.ico
+Caption "Searchy Installer"
+Name "Searchy"
+AutoCloseWindow true
+
+InstallDir $PROGRAMFILES\DeavmiOSS
+
+OutFile "Searchy\bin\Release\Searchy-Installer.exe"
+
+; Pages
+
+Page components
+Page directory
+Page instfiles
+UninstPage uninstConfirm
+UninstPage instfiles
+
+; Sections
+
+Section "Searchy Executable & Uninstaller"
+  SectionIn RO
+  SetOutPath $INSTDIR
+  File "Searchy\bin\Release\Searchy.exe"
+  WriteUninstaller "Searchy-Uninst.exe"
+SectionEnd
+
+Section "Searchy Start Menu Shortcuts"
+  CreateDirectory "$SMPROGRAMS\DeavmiOSS"
+  CreateShortCut "$SMPROGRAMS\DeavmiOSS\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "YouTube Video Linker"
+  CreateShortCut "$SMPROGRAMS\DeavmiOSS\Uninstall Searchy.lnk" "$INSTDIR\Searchy-Uninst.exe" "" "" "" "" "" "Uninstall YouTube Video Linker"
+  ;Syntax for CreateShortCut: link.lnk target.file [parameters [icon.file [icon_index_number [start_options [keyboard_shortcut [description]]]]]]
+SectionEnd
+
+Section "Searchy Desktop Shortcut"
+  CreateShortCut "$DESKTOP\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "YouTube Video Linker"
+SectionEnd
+
+Section "Searchy Quick Launch Shortcut"
+  CreateShortCut "$QUICKLAUNCH\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "YouTube Video Linker"
+SectionEnd
+
+;Section "More apps from DeavmiOSS"
+; this should have sub options for available apps, that are downloaded
+;SectionEnd
+
+; Uninstaller
+
+Section "Uninstall"
+  Delete $INSTDIR\Searchy-Uninst.exe   ; Remove Application Files
+  Delete $INSTDIR\Searchy.exe
+  RMDir $INSTDIR
+  
+  Delete $SMPROGRAMS\DeavmiOSS\Searchy.lnk   ; Remove Start Menu Shortcuts & Folder
+  Delete "$SMPROGRAMS\DeavmiOSS\Uninstall Searchy.lnk"
+  RMDir $SMPROGRAMS\DeavmiOSS
+  
+  Delete $DESKTOP\Searchy.lnk   ; Remove Desktop Shortcut
+  Delete $QUICKLAUNCH\Searchy.lnk   ; Remove Quick Launch shortcut
+SectionEnd
+
+; Functions
+
+Function .onInit
+  MessageBox MB_YESNO "This will install Searchy. Do you wish to continue?" IDYES gogogo
+    Abort
+  gogogo:
+  File "Searchy\youtube_withLink.ico"
+  SetBrandingImage "[/RESIZETOFIT] Searchy\youtube_withLink.ico"
+  SetBrandingImage "[/RESIZETOFIT] youtube_withLink.ico"
+  SetShellVarContext all
+  SetAutoClose true
+FunctionEnd
+
+Function .onInstSuccess
+    MessageBox MB_YESNO "Install Succeeded! Open ReadMe?" IDNO NoReadme
+      ExecShell "open" "https://github.com/Walkman100/Searchy/blob/master/README.md#youtube-video-linker-"
+    NoReadme:
+FunctionEnd
+
+; Uninstaller
+
+Function un.onInit
+    MessageBox MB_YESNO "This will uninstall Searchy. Continue?" IDYES NoAbort
+      Abort ; causes uninstaller to quit.
+    NoAbort:
+    SetShellVarContext all
+    SetAutoClose true
+FunctionEnd
+
+Function un.onUninstFailed
+    MessageBox MB_OK "Uninstall Cancelled"
+FunctionEnd
+
+Function un.onUninstSuccess
+    MessageBox MB_OK "Uninstall Completed"
+FunctionEnd
