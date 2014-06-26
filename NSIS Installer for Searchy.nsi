@@ -3,7 +3,7 @@
 ; As a program that all Power PC users should have, Notepad ++ is recommended to edit this file
 
 AddBrandingImage top 20
-Icon Searchy\youtube_withLink.ico
+; Icon Searchy\youtube_withLink.ico
 Caption "Searchy Installer"
 Name "Searchy"
 AutoCloseWindow true
@@ -31,9 +31,9 @@ SectionEnd
 
 Section "Searchy Start Menu Shortcuts"
   CreateDirectory "$SMPROGRAMS\DeavmiOSS"
-  CreateShortCut "$SMPROGRAMS\DeavmiOSS\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "YouTube Video Linker"
-  CreateShortCut "$SMPROGRAMS\DeavmiOSS\Uninstall Searchy.lnk" "$INSTDIR\Searchy-Uninst.exe" "" "" "" "" "" "Uninstall YouTube Video Linker"
-  ;Syntax for CreateShortCut: link.lnk target.file [parameters [icon.file [icon_index_number [start_options [keyboard_shortcut [description]]]]]]
+  CreateShortCut "$SMPROGRAMS\DeavmiOSS\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "Start Searchy"
+  CreateShortCut "$SMPROGRAMS\DeavmiOSS\Uninstall Searchy.lnk" "$INSTDIR\Searchy-Uninst.exe" "" "" "" "" "" "Uninstall Searchy"
+; Syntax for CreateShortCut: link.lnk target.file [parameters [icon.file [icon_index_number [start_options [keyboard_shortcut [description]]]]]]
 SectionEnd
 
 Section "Searchy Desktop Shortcut"
@@ -69,23 +69,23 @@ Function .onInit
   MessageBox MB_YESNO "This will install Searchy. Do you wish to continue?" IDYES gogogo
     Abort
   gogogo:
-  File "Searchy\youtube_withLink.ico"
-  SetBrandingImage "[/RESIZETOFIT] Searchy\youtube_withLink.ico"
-  SetBrandingImage "[/RESIZETOFIT] youtube_withLink.ico"
+;  File "Searchy\youtube_withLink.ico"
+;  SetBrandingImage "[/RESIZETOFIT] Searchy\youtube_withLink.ico"
+;  SetBrandingImage "[/RESIZETOFIT] youtube_withLink.ico"
   SetShellVarContext all
   SetAutoClose true
 FunctionEnd
 
 Function .onInstSuccess
-    MessageBox MB_YESNO "Install Succeeded! Open ReadMe?" IDNO NoReadme
-      ExecShell "open" "https://github.com/Walkman100/Searchy/blob/master/README.md#youtube-video-linker-"
+    MessageBox MB_YESNO "Install Succeeded! Open Wiki?" IDNO NoReadme
+      ExecShell "open" "https://github.com/Deavmi/Searchy/wiki"
     NoReadme:
 FunctionEnd
 
 ; Uninstaller
 
 Function un.onInit
-    MessageBox MB_YESNO "This will uninstall Searchy. Continue?" IDYES NoAbort
+    MessageBox MB_YESNO "This will uninstall Searchy. Do you wish to continue?" IDYES NoAbort
       Abort ; causes uninstaller to quit.
     NoAbort:
     SetShellVarContext all
