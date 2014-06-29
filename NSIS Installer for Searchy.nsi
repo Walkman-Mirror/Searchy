@@ -2,7 +2,7 @@
 ; get NSIS at http://tenet.dl.sourceforge.net/project/nsis/NSIS%202/2.46/nsis-2.46-setup.exe
 ; As a program that all Power PC users should have, Notepad ++ is recommended to edit this file
 
-AddBrandingImage top 20
+; AddBrandingImage top 20
 ; Icon Searchy\youtube_withLink.ico
 Caption "Searchy Installer"
 Name "Searchy"
@@ -37,11 +37,11 @@ Section "Searchy Start Menu Shortcuts"
 SectionEnd
 
 Section "Searchy Desktop Shortcut"
-  CreateShortCut "$DESKTOP\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "YouTube Video Linker"
+  CreateShortCut "$DESKTOP\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "Searchy"
 SectionEnd
 
 Section "Searchy Quick Launch Shortcut"
-  CreateShortCut "$QUICKLAUNCH\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "YouTube Video Linker"
+  CreateShortCut "$QUICKLAUNCH\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "Searchy"
 SectionEnd
 
 ;Section "More apps from DeavmiOSS"
@@ -77,25 +77,25 @@ Function .onInit
 FunctionEnd
 
 Function .onInstSuccess
-    MessageBox MB_YESNO "Install Succeeded! Open Wiki?" IDNO NoReadme
-      ExecShell "open" "https://github.com/Deavmi/Searchy/wiki"
-    NoReadme:
+  MessageBox MB_YESNO "Install Succeeded! Open Wiki?" IDNO NoReadme
+    ExecShell "open" "https://github.com/Deavmi/Searchy/wiki"
+  NoReadme:
 FunctionEnd
 
 ; Uninstaller
 
 Function un.onInit
-    MessageBox MB_YESNO "This will uninstall Searchy. Do you wish to continue?" IDYES NoAbort
-      Abort ; causes uninstaller to quit.
-    NoAbort:
-    SetShellVarContext all
-    SetAutoClose true
+  MessageBox MB_YESNO "This will uninstall Searchy. Do you wish to continue?" IDYES NoAbort
+    Abort ; causes uninstaller to quit.
+  NoAbort:
+  SetShellVarContext all
+  SetAutoClose true
 FunctionEnd
 
 Function un.onUninstFailed
-    MessageBox MB_OK "Uninstall Cancelled"
+  MessageBox MB_OK "Uninstall Cancelled"
 FunctionEnd
 
 Function un.onUninstSuccess
-    MessageBox MB_OK "Uninstall Completed"
+  MessageBox MB_OK "Uninstall Completed"
 FunctionEnd
