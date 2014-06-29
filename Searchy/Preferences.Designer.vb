@@ -23,20 +23,20 @@ Partial Class Preferences
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblDescription = New System.Windows.Forms.Label()
+        Me.lbPreferences = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnDone = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.CheckBox4 = New System.Windows.Forms.CheckBox()
         Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.btnApply = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
+        Me.CheckBox5 = New System.Windows.Forms.CheckBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -45,33 +45,33 @@ Partial Class Preferences
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.lblDescription)
+        Me.Panel1.Controls.Add(Me.lbPreferences)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(467, 100)
         Me.Panel1.TabIndex = 66
         '
-        'Label2
+        'lblDescription
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(196, 32)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(204, 18)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Tweak Searchy to your needs"
+        Me.lblDescription.AutoSize = True
+        Me.lblDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescription.Location = New System.Drawing.Point(196, 32)
+        Me.lblDescription.Name = "lblDescription"
+        Me.lblDescription.Size = New System.Drawing.Size(204, 18)
+        Me.lblDescription.TabIndex = 2
+        Me.lblDescription.Text = "Tweak Searchy to your needs"
         '
-        'Label1
+        'lbPreferences
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(194, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 29)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Preferences"
+        Me.lbPreferences.AutoSize = True
+        Me.lbPreferences.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbPreferences.Location = New System.Drawing.Point(194, 3)
+        Me.lbPreferences.Name = "lbPreferences"
+        Me.lbPreferences.Size = New System.Drawing.Size(144, 29)
+        Me.lbPreferences.TabIndex = 1
+        Me.lbPreferences.Text = "Preferences"
         '
         'PictureBox1
         '
@@ -94,9 +94,9 @@ Partial Class Preferences
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.CheckBox12)
-        Me.GroupBox1.Controls.Add(Me.CheckBox11)
-        Me.GroupBox1.Controls.Add(Me.CheckBox8)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.Label3)
+        Me.GroupBox1.Controls.Add(Me.CheckBox5)
         Me.GroupBox1.Controls.Add(Me.CheckBox4)
         Me.GroupBox1.Controls.Add(Me.CheckBox3)
         Me.GroupBox1.Controls.Add(Me.CheckBox2)
@@ -108,44 +108,14 @@ Partial Class Preferences
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Preferences"
         '
-        'CheckBox12
-        '
-        Me.CheckBox12.AutoSize = True
-        Me.CheckBox12.Location = New System.Drawing.Point(6, 134)
-        Me.CheckBox12.Name = "CheckBox12"
-        Me.CheckBox12.Size = New System.Drawing.Size(124, 17)
-        Me.CheckBox12.TabIndex = 15
-        Me.CheckBox12.Text = "Auto-refresh difficulty"
-        Me.CheckBox12.UseVisualStyleBackColor = True
-        '
-        'CheckBox11
-        '
-        Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Location = New System.Drawing.Point(6, 157)
-        Me.CheckBox11.Name = "CheckBox11"
-        Me.CheckBox11.Size = New System.Drawing.Size(111, 17)
-        Me.CheckBox11.TabIndex = 14
-        Me.CheckBox11.Text = "Auto-refresh news"
-        Me.CheckBox11.UseVisualStyleBackColor = True
-        '
-        'CheckBox8
-        '
-        Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(6, 111)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(142, 17)
-        Me.CheckBox8.TabIndex = 4
-        Me.CheckBox8.Text = "Auto-refresh block count"
-        Me.CheckBox8.UseVisualStyleBackColor = True
-        '
         'CheckBox4
         '
         Me.CheckBox4.AutoSize = True
         Me.CheckBox4.Location = New System.Drawing.Point(6, 88)
         Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(144, 17)
+        Me.CheckBox4.Size = New System.Drawing.Size(217, 17)
         Me.CheckBox4.TabIndex = 3
-        Me.CheckBox4.Text = "Auto-refresh amount sent"
+        Me.CheckBox4.Text = "Always use HTTPS (Secure connection)"
         Me.CheckBox4.UseVisualStyleBackColor = True
         '
         'CheckBox3
@@ -153,9 +123,9 @@ Partial Class Preferences
         Me.CheckBox3.AutoSize = True
         Me.CheckBox3.Location = New System.Drawing.Point(6, 65)
         Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(165, 17)
+        Me.CheckBox3.Size = New System.Drawing.Size(153, 17)
         Me.CheckBox3.TabIndex = 2
-        Me.CheckBox3.Text = "Auto-refresh amount received"
+        Me.CheckBox3.Text = "Top button closes Searchy"
         Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'CheckBox2
@@ -163,9 +133,9 @@ Partial Class Preferences
         Me.CheckBox2.AutoSize = True
         Me.CheckBox2.Location = New System.Drawing.Point(6, 42)
         Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(124, 17)
+        Me.CheckBox2.Size = New System.Drawing.Size(160, 17)
         Me.CheckBox2.TabIndex = 1
-        Me.CheckBox2.Text = "Auto-refresh balance"
+        Me.CheckBox2.Text = "Remember last search query"
         Me.CheckBox2.UseVisualStyleBackColor = True
         '
         'CheckBox1
@@ -196,6 +166,32 @@ Partial Class Preferences
         Me.btnReset.Text = "&Reset"
         Me.btnReset.UseVisualStyleBackColor = True
         '
+        'CheckBox5
+        '
+        Me.CheckBox5.AutoSize = True
+        Me.CheckBox5.Location = New System.Drawing.Point(6, 111)
+        Me.CheckBox5.Name = "CheckBox5"
+        Me.CheckBox5.Size = New System.Drawing.Size(98, 17)
+        Me.CheckBox5.TabIndex = 4
+        Me.CheckBox5.Text = "Hide on startup"
+        Me.CheckBox5.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(3, 131)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(177, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Key checking interval (milliseconds):"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(6, 147)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(109, 20)
+        Me.TextBox1.TabIndex = 6
+        '
         'Preferences
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -223,8 +219,8 @@ Partial Class Preferences
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblDescription As System.Windows.Forms.Label
+    Friend WithEvents lbPreferences As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents btnDone As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -232,9 +228,9 @@ Partial Class Preferences
     Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox8 As System.Windows.Forms.CheckBox
     Friend WithEvents btnApply As System.Windows.Forms.Button
-    Friend WithEvents CheckBox12 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox11 As System.Windows.Forms.CheckBox
     Friend WithEvents btnReset As System.Windows.Forms.Button
+    Friend WithEvents CheckBox5 As System.Windows.Forms.CheckBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class
