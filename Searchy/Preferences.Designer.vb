@@ -173,9 +173,9 @@ Partial Class Preferences
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Location = New System.Drawing.Point(6, 19)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(151, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(201, 17)
         Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "Auto-refresh all wallet stats"
+        Me.CheckBox1.Text = "Remember last search engine choice"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'btnApply
