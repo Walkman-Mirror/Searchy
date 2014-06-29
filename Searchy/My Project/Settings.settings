@@ -5,6 +5,15 @@
     <Setting Name="DefaultSearchEngine" Type="System.String" Scope="User">
       <Value Profile="(Default)">Google</Value>
     </Setting>
+    <Setting Name="TopButtonClosesApp" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="KeyCheckerInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="AlwaysUseHTTPS" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
     <Setting Name="RememberLastSearchEngine" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
@@ -17,14 +26,8 @@
     <Setting Name="RememberLastSearchQuery_value" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="TopButtonClosesApp" Type="System.Boolean" Scope="User">
+    <Setting Name="HideOnStartup" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="KeyCheckerInterval" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">100</Value>
-    </Setting>
-    <Setting Name="AlwaysUSeHTTPS" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

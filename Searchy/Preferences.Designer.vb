@@ -28,15 +28,11 @@ Partial Class Preferences
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnDone = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.CheckBox12 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox11 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.btnApply = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -94,10 +90,6 @@ Partial Class Preferences
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.CheckBox12)
-        Me.GroupBox1.Controls.Add(Me.CheckBox11)
-        Me.GroupBox1.Controls.Add(Me.CheckBox8)
-        Me.GroupBox1.Controls.Add(Me.CheckBox4)
         Me.GroupBox1.Controls.Add(Me.CheckBox3)
         Me.GroupBox1.Controls.Add(Me.CheckBox2)
         Me.GroupBox1.Controls.Add(Me.CheckBox1)
@@ -108,74 +100,14 @@ Partial Class Preferences
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Preferences"
         '
-        'CheckBox12
-        '
-        Me.CheckBox12.AutoSize = True
-        Me.CheckBox12.Location = New System.Drawing.Point(6, 134)
-        Me.CheckBox12.Name = "CheckBox12"
-        Me.CheckBox12.Size = New System.Drawing.Size(124, 17)
-        Me.CheckBox12.TabIndex = 15
-        Me.CheckBox12.Text = "Auto-refresh difficulty"
-        Me.CheckBox12.UseVisualStyleBackColor = True
-        '
-        'CheckBox11
-        '
-        Me.CheckBox11.AutoSize = True
-        Me.CheckBox11.Location = New System.Drawing.Point(6, 157)
-        Me.CheckBox11.Name = "CheckBox11"
-        Me.CheckBox11.Size = New System.Drawing.Size(111, 17)
-        Me.CheckBox11.TabIndex = 14
-        Me.CheckBox11.Text = "Auto-refresh news"
-        Me.CheckBox11.UseVisualStyleBackColor = True
-        '
-        'CheckBox8
-        '
-        Me.CheckBox8.AutoSize = True
-        Me.CheckBox8.Location = New System.Drawing.Point(6, 111)
-        Me.CheckBox8.Name = "CheckBox8"
-        Me.CheckBox8.Size = New System.Drawing.Size(142, 17)
-        Me.CheckBox8.TabIndex = 4
-        Me.CheckBox8.Text = "Auto-refresh block count"
-        Me.CheckBox8.UseVisualStyleBackColor = True
-        '
-        'CheckBox4
-        '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Location = New System.Drawing.Point(6, 88)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(144, 17)
-        Me.CheckBox4.TabIndex = 3
-        Me.CheckBox4.Text = "Auto-refresh amount sent"
-        Me.CheckBox4.UseVisualStyleBackColor = True
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(6, 65)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(165, 17)
-        Me.CheckBox3.TabIndex = 2
-        Me.CheckBox3.Text = "Auto-refresh amount received"
-        Me.CheckBox3.UseVisualStyleBackColor = True
-        '
-        'CheckBox2
-        '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(6, 42)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(124, 17)
-        Me.CheckBox2.TabIndex = 1
-        Me.CheckBox2.Text = "Auto-refresh balance"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Location = New System.Drawing.Point(6, 19)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(151, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(98, 17)
         Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "Auto-refresh all wallet stats"
+        Me.CheckBox1.Text = "Hide on startup"
         Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'btnApply
@@ -195,6 +127,26 @@ Partial Class Preferences
         Me.btnReset.TabIndex = 69
         Me.btnReset.Text = "&Reset"
         Me.btnReset.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Location = New System.Drawing.Point(6, 42)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(145, 17)
+        Me.CheckBox2.TabIndex = 1
+        Me.CheckBox2.Text = "Top button quits Searchy"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Location = New System.Drawing.Point(6, 65)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(98, 17)
+        Me.CheckBox3.TabIndex = 2
+        Me.CheckBox3.Text = "Hide on startup"
+        Me.CheckBox3.UseVisualStyleBackColor = True
         '
         'Preferences
         '
@@ -228,13 +180,9 @@ Partial Class Preferences
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents btnDone As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents CheckBox4 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox8 As System.Windows.Forms.CheckBox
     Friend WithEvents btnApply As System.Windows.Forms.Button
-    Friend WithEvents CheckBox12 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox11 As System.Windows.Forms.CheckBox
     Friend WithEvents btnReset As System.Windows.Forms.Button
+    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
 End Class
