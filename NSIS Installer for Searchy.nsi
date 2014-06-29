@@ -8,7 +8,7 @@ Caption "Searchy Installer"
 Name "Searchy"
 AutoCloseWindow true
 
-InstallDir $PROGRAMFILES\DeavmiOSS
+InstallDir $PROGRAMFILES\DeavmiOSS\Searchy
 
 OutFile "Searchy\bin\Release\Searchy-Installer.exe"
 
