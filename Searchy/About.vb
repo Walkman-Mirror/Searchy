@@ -14,7 +14,7 @@
 '   You should have received a copy of the GNU General Public License
 '   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '
-'   Contact the DeavmiOSS orginization by electronic mail: mailto:tristankildaire@gmail.com or mailto:walkman100@gmail.com
+' Contact the DeavmiOSS orginization by electronic mail: mailto:tristankildaire@gmail.com or mailto:walkman@hackermail.com (mailto:matthewcarter17@gmail.com)
 '   Contact the DeavmiOSS orginization by paper mail: <no info>
 
 Public Class About

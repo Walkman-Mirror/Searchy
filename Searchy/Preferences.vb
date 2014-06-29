@@ -14,8 +14,7 @@
 '   You should have received a copy of the GNU General Public License
 '   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '
-'   Contact the DeavmiOSS orginization by electronic mail: mailto:tristankildaire@gmail.com or mailto:walkman100@gmail.com
-'   Contact the DeavmiOSS orginization by paper mail: <no info>
+' Contact the DeavmiOSS orginization by electronic mail: mailto:tristankildaire@gmail.com or mailto:walkman@hackermail.com (mailto:matthewcarter17@gmail.com)
 
 Public Class Preferences
 
@@ -26,6 +25,8 @@ Public Class Preferences
 
     Private Sub Preferences_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Haven't finished this code yet.
+        CheckBox1.Checked = My.Settings.RememberLastSearchEngine
+        CheckBox2.Checked = My.Settings.RememberLastSearchQuery
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnApply.Click
@@ -33,6 +34,8 @@ Public Class Preferences
     End Sub
 
     Private Sub ApplyChanges()
+        My.Settings.RememberLastSearchEngine = CheckBox1.Checked
+        My.Settings.RememberLastSearchQuery = CheckBox2.Checked
         My.Settings.Save()
     End Sub
 
