@@ -27,6 +27,10 @@ Public Class Preferences
         'Haven't finished this code yet.
         CheckBox1.Checked = My.Settings.RememberLastSearchEngine
         CheckBox2.Checked = My.Settings.RememberLastSearchQuery
+        CheckBox3.Checked = My.Settings.TopButtonClosesApp
+        CheckBox4.Checked = My.Settings.AlwaysUSeHTTPS
+        CheckBox5.Checked = My.Settings.HideOnStartup
+        TextBox1.Text = My.Settings.KeyCheckerInterval
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnApply.Click
@@ -36,6 +40,10 @@ Public Class Preferences
     Private Sub ApplyChanges()
         My.Settings.RememberLastSearchEngine = CheckBox1.Checked
         My.Settings.RememberLastSearchQuery = CheckBox2.Checked
+        My.Settings.TopButtonClosesApp = CheckBox3.Checked
+        My.Settings.AlwaysUSeHTTPS = CheckBox4.Checked
+        My.Settings.HideOnStartup = CheckBox5.Checked
+        My.Settings.KeyCheckerInterval = TextBox1.Text
         My.Settings.Save()
     End Sub
 
