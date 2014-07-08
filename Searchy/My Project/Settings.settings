@@ -1,32 +1,40 @@
-﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
-  <Profiles />
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SettingsFile CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true" xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
   <Settings>
-    <Setting Name="DefaultSearchEngine" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Google</Value>
-    </Setting>
-    <Setting Name="RememberLastSearchEngine" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="RememberLastSearchEngine_value" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="RememberLastSearchQuery" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="RememberLastSearchQuery_value" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="TopButtonClosesApp" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
-    </Setting>
-    <Setting Name="KeyCheckerInterval" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">100</Value>
-    </Setting>
-    <Setting Name="AlwaysUSeHTTPS" Type="System.Boolean" Scope="User">
+    <Setting Name="AlwaysUSeHTTPS" Type="System.Boolean" Scope="User" Roaming="false">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="HideOnStartup" Type="System.Boolean" Scope="User">
+    <Setting Name="DefaultSearchEngine" Type="System.String" Scope="User" Roaming="false">
+      <Value Profile="(Default)">Google</Value>
+    </Setting>
+    <Setting Name="HideOnStartup" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="KeyCheckerInterval" Type="System.Int32" Scope="User" Roaming="false">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="LastBrowser" Type="System.String" Scope="User" Roaming="false">
+      <Value Profile="(Default)">Default link handler</Value>
+    </Setting>
+    <Setting Name="RememberBrowser" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RememberLastSearchEngine" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="RememberLastSearchEngine_value" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="RememberLastSearchQuery" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="RememberLastSearchQuery_value" Type="System.Boolean" Scope="User" Roaming="false">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="TopButtonClosesApp" Type="System.Boolean" Scope="User" Roaming="false">
       <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>

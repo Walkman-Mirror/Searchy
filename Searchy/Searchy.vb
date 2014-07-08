@@ -20,7 +20,10 @@ Public Class Searchy
 
     'Public declarations
     Public version As String = My.Application.Info.Version.ToString & " (pre-release)"
-
+    Dim UseDefaultBrowser As Boolean = True
+    Dim ProgramFilesDir As String = Environment.GetEnvironmentVariable("ProgramFiles")
+    Dim openIn As String = ""
+    
     'window-related stuff
 
     Private Sub Searchy_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -28,6 +31,10 @@ Public Class Searchy
         If My.Settings.RememberLastSearchEngine = True Then cbEngine.Text = My.Settings.RememberLastSearchEngine_value
         If My.Settings.RememberLastSearchQuery = True Then txtQuery.Text = My.Settings.RememberLastSearchQuery_value
         cbEngine.Text = My.Settings.DefaultSearchEngine
+        chkRememberBrowser.Checked = My.Settings.RememberBrowser
+        If My.Settings.RememberBrowser = True Then
+            txtComboBrowser.Text = My.Settings.LastBrowser
+        End If
         timerKeyChecker.Start()
     End Sub
 
@@ -80,7 +87,7 @@ Public Class Searchy
     'start searches
 
     Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
-        Search(Query:=txtQuery.Text)
+        Search(txtQuery.Text)
     End Sub
 
     Private Sub Search(Query As String)
@@ -163,5 +170,55 @@ Public Class Searchy
     Private Sub NotificationContextMenuSubmitFeedback_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuSubmitFeedback.Click
         Process.Start("https://github.com/deavmi/Searchy/issues/new")
     End Sub
+    
+    Private Sub GetBrowser()
+        If txtComboBrowser.Text = "Browse..." Or txtComboBrowser.Text = "" Then
+            UseDefaultBrowser = True
+        ElseIf txtComboBrowser.Text = "Mozilla Firefox (%ProgramFiles%\Mozilla Firefox\firefox.exe)" Then
+            openIn = ProgramFilesDir & "\Mozilla Firefox\firefox.exe"
+        ElseIf txtComboBrowser.Text = "Google Chrome (%ProgramFiles%\Google\Chrome\Application\chrome.exe)" Then
+            openIn = ProgramFilesDir & "\Google\Chrome\Application\chrome.exe"
+        ElseIf txtComboBrowser.Text = "Opera 22 (%ProgramFiles%\Opera\launcher.exe)" Then
+            openIn = ProgramFilesDir & "\Opera\launcher.exe"
+        ElseIf txtComboBrowser.Text = "Opera 12 (%ProgramFiles%\Opera\opera.exe)" Then
+            openIn = ProgramFilesDir & "\Opera\opera.exe"
+        ElseIf txtComboBrowser.Text = "Safari (%ProgramFiles%\Safari\Safari.exe)" Then
+            openIn = ProgramFilesDir & "\Safari\Safari.exe"
+        ElseIf txtComboBrowser.Text = "Avant Browser (%ProgramFiles%\Avant Browser\avant.exe)" Then
+            openIn = ProgramFilesDir & "\Avant Browser\avant.exe"
+        ElseIf txtComboBrowser.Text = "Lunascape6 (%ProgramFiles%\Lunascape\Lunascape6\Luna.exe)" Then
+            openIn = ProgramFilesDir & "\Lunascape\Lunascape6\Luna.exe"
+        ElseIf txtComboBrowser.Text = "Sea Monkey (%ProgramFiles%\SeaMonkey\seamonkey.exe)" Then
+            openIn = ProgramFilesDir & "\SeaMonkey\seamonkey.exe"
+        ElseIf txtComboBrowser.Text = "Internet Explorer (%ProgramFiles%\Internet Explorer\iexplore.exe)" Then
+            openIn = ProgramFilesDir & "\Internet Explorer\iexplore.exe"
+        ElseIf txtComboBrowser.Text = "Netscape Navigator 9 (%ProgramFiles%\Netscape\Navigator 9\navigator.exe)" Then
+            openIn = ProgramFilesDir & "\Netscape\Navigator 9\navigator.exe"
+        ElseIf system.io.File.Exists(txtComboBrowser.Text) Then
+            openIn = txtComboBrowser.Text
+        End If
+    End Sub
+    
+    Sub TxtComboBrowser_SelectedIndexChanged(sender As Object, e As EventArgs)
+        If txtComboBrowser.Text = "Default link handler" Then
+            UseDefaultBrowser = True
+        Else
+            UseDefaultBrowser = False
+        End If
 
+        If txtComboBrowser.Text = "Browse..." Then
+            'openFileDialogBrowser.ShowDialog()
+        End If
+        
+        If My.Settings.RememberBrowser = True Then
+            My.Settings.LastBrowser = txtComboBrowser.Text
+        End If
+    End Sub
+    
+    Sub ChkRememberBrowser_Click(sender As Object, e As EventArgs)
+        My.Settings.RememberBrowser = chkRememberBrowser.Checked
+        If My.Settings.RememberBrowser = True Then
+            My.Settings.LastBrowser = txtComboBrowser.Text
+        End If
+    End Sub
 End Class

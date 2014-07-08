@@ -47,14 +47,17 @@ Partial Class Searchy
         Me.NotificationContextMenuHide = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotificationContextMenuExit = New System.Windows.Forms.ToolStripMenuItem()
         Me.timerKeyChecker = New System.Windows.Forms.Timer(Me.components)
-        Me.pnlTop.SuspendLayout()
-        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.NotificationContextMenu.SuspendLayout()
-        Me.SuspendLayout()
+        Me.lblBrowser = New System.Windows.Forms.Label()
+        Me.txtComboBrowser = New System.Windows.Forms.ComboBox()
+        Me.chkRememberBrowser = New System.Windows.Forms.CheckBox()
+        Me.pnlTop.SuspendLayout
+        CType(Me.imgLogo,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.NotificationContextMenu.SuspendLayout
+        Me.SuspendLayout
         '
         'pnlTop
         '
-        Me.pnlTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.pnlTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
         Me.pnlTop.Controls.Add(Me.lblVersionSmall)
         Me.pnlTop.Controls.Add(Me.imgLogo)
         Me.pnlTop.Controls.Add(Me.btnClose)
@@ -66,8 +69,8 @@ Partial Class Searchy
         '
         'lblVersionSmall
         '
-        Me.lblVersionSmall.AutoSize = True
-        Me.lblVersionSmall.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblVersionSmall.AutoSize = true
+        Me.lblVersionSmall.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.lblVersionSmall.Location = New System.Drawing.Point(171, 14)
         Me.lblVersionSmall.Name = "lblVersionSmall"
         Me.lblVersionSmall.Size = New System.Drawing.Size(41, 13)
@@ -82,7 +85,7 @@ Partial Class Searchy
         Me.imgLogo.Size = New System.Drawing.Size(62, 62)
         Me.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.imgLogo.TabIndex = 3
-        Me.imgLogo.TabStop = False
+        Me.imgLogo.TabStop = false
         '
         'btnClose
         '
@@ -91,13 +94,13 @@ Partial Class Searchy
         Me.btnClose.Size = New System.Drawing.Size(62, 23)
         Me.btnClose.TabIndex = 2
         Me.btnClose.Text = "&X"
-        Me.btnClose.UseVisualStyleBackColor = True
+        Me.btnClose.UseVisualStyleBackColor = true
         '
         'lblProductName
         '
-        Me.lblProductName.AutoSize = True
-        Me.lblProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblProductName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.lblProductName.AutoSize = true
+        Me.lblProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lblProductName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
         Me.lblProductName.Location = New System.Drawing.Point(67, 20)
         Me.lblProductName.Name = "lblProductName"
         Me.lblProductName.Size = New System.Drawing.Size(122, 33)
@@ -113,7 +116,7 @@ Partial Class Searchy
         '
         'lblTypeOfSearch
         '
-        Me.lblTypeOfSearch.AutoSize = True
+        Me.lblTypeOfSearch.AutoSize = true
         Me.lblTypeOfSearch.Location = New System.Drawing.Point(12, 99)
         Me.lblTypeOfSearch.Name = "lblTypeOfSearch"
         Me.lblTypeOfSearch.Size = New System.Drawing.Size(85, 13)
@@ -124,7 +127,7 @@ Partial Class Searchy
         '
         Me.cbEngine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbEngine.DropDownWidth = 110
-        Me.cbEngine.FormattingEnabled = True
+        Me.cbEngine.FormattingEnabled = true
         Me.cbEngine.Items.AddRange(New Object() {" == Web ==", "Google", "Yahoo", "Bing", "DuckDuckGo", " == Images ==", "Google Images", "Bing Images", " == Music ==", "SoundCloud", "Beatport", " == Video ==", "YouTube", "Dailymotion", "Google Videos", "Bing Videos", " == Social ==", "Reddit", " == Entertainment ==", "Newgrounds", " == Info ==", "Wikipedia", " == Products ==", "eBay", "Amazon", " == Code ==", "GitHub", "Bitbucket", "Stack Overflow", "Super User", "Stack Exchange"})
         Me.cbEngine.Location = New System.Drawing.Point(347, 114)
         Me.cbEngine.MaxDropDownItems = 50
@@ -139,14 +142,14 @@ Partial Class Searchy
         Me.btnSearch.Size = New System.Drawing.Size(90, 23)
         Me.btnSearch.TabIndex = 4
         Me.btnSearch.Text = "&Search"
-        Me.btnSearch.UseVisualStyleBackColor = True
+        Me.btnSearch.UseVisualStyleBackColor = true
         '
         'NotificationIcon
         '
         Me.NotificationIcon.ContextMenuStrip = Me.NotificationContextMenu
-        Me.NotificationIcon.Icon = CType(resources.GetObject("NotificationIcon.Icon"), System.Drawing.Icon)
+        Me.NotificationIcon.Icon = CType(resources.GetObject("NotificationIcon.Icon"),System.Drawing.Icon)
         Me.NotificationIcon.Text = "Searchy"
-        Me.NotificationIcon.Visible = True
+        Me.NotificationIcon.Visible = true
         '
         'NotificationContextMenu
         '
@@ -167,14 +170,14 @@ Partial Class Searchy
         '
         'NotificationContextMenuProjectSite
         '
-        Me.NotificationContextMenuProjectSite.Image = CType(resources.GetObject("NotificationContextMenuProjectSite.Image"), System.Drawing.Image)
+        Me.NotificationContextMenuProjectSite.Image = CType(resources.GetObject("NotificationContextMenuProjectSite.Image"),System.Drawing.Image)
         Me.NotificationContextMenuProjectSite.Name = "NotificationContextMenuProjectSite"
         Me.NotificationContextMenuProjectSite.Size = New System.Drawing.Size(219, 22)
         Me.NotificationContextMenuProjectSite.Text = "&Project site"
         '
         'NotificationContextMenuSourceCode
         '
-        Me.NotificationContextMenuSourceCode.Image = CType(resources.GetObject("NotificationContextMenuSourceCode.Image"), System.Drawing.Image)
+        Me.NotificationContextMenuSourceCode.Image = CType(resources.GetObject("NotificationContextMenuSourceCode.Image"),System.Drawing.Image)
         Me.NotificationContextMenuSourceCode.Name = "NotificationContextMenuSourceCode"
         Me.NotificationContextMenuSourceCode.Size = New System.Drawing.Size(219, 22)
         Me.NotificationContextMenuSourceCode.Text = "&Source code"
@@ -187,7 +190,7 @@ Partial Class Searchy
         'NotificationContextMenuUpdate
         '
         Me.NotificationContextMenuUpdate.Name = "NotificationContextMenuUpdate"
-        Me.NotificationContextMenuUpdate.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
+        Me.NotificationContextMenuUpdate.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.C),System.Windows.Forms.Keys)
         Me.NotificationContextMenuUpdate.Size = New System.Drawing.Size(219, 22)
         Me.NotificationContextMenuUpdate.Text = "&Check for updates"
         '
@@ -214,40 +217,83 @@ Partial Class Searchy
         'NotificationContextMenuHide
         '
         Me.NotificationContextMenuHide.Name = "NotificationContextMenuHide"
-        Me.NotificationContextMenuHide.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
+        Me.NotificationContextMenuHide.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.H),System.Windows.Forms.Keys)
         Me.NotificationContextMenuHide.Size = New System.Drawing.Size(219, 22)
         Me.NotificationContextMenuHide.Text = "&Hide"
         '
         'NotificationContextMenuExit
         '
         Me.NotificationContextMenuExit.Name = "NotificationContextMenuExit"
-        Me.NotificationContextMenuExit.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
+        Me.NotificationContextMenuExit.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E),System.Windows.Forms.Keys)
         Me.NotificationContextMenuExit.Size = New System.Drawing.Size(219, 22)
         Me.NotificationContextMenuExit.Text = "&Exit"
         '
+        'lblBrowser
+        '
+        Me.lblBrowser.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
+        Me.lblBrowser.AutoSize = true
+        Me.lblBrowser.Location = New System.Drawing.Point(3, 150)
+        Me.lblBrowser.Name = "lblBrowser"
+        Me.lblBrowser.Size = New System.Drawing.Size(149, 13)
+        Me.lblBrowser.TabIndex = 5
+        Me.lblBrowser.Text = "Where to open search results:"
+        '
+        'txtComboBrowser
+        '
+        Me.txtComboBrowser.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left)  _
+                        Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.txtComboBrowser.FormattingEnabled = true
+        Me.txtComboBrowser.Items.AddRange(New Object() {"Default link handler", "Mozilla Firefox (%ProgramFiles%\Mozilla Firefox\firefox.exe)", "Google Chrome (%ProgramFiles%\Google\Chrome\Application\chrome.exe)", "Opera 22 (%ProgramFiles%\Opera\launcher.exe)", "Opera 12 (%ProgramFiles%\Opera\opera.exe)", "Safari (%ProgramFiles%\Safari\Safari.exe)", "Avant Browser (%ProgramFiles%\Avant Browser\avant.exe)", "Lunascape6 (%ProgramFiles%\Lunascape\Lunascape6\Luna.exe)", "Sea Monkey (%ProgramFiles%\SeaMonkey\seamonkey.exe)", "Internet Explorer (%ProgramFiles%\Internet Explorer\iexplore.exe)", "Netscape Navigator 9 (%ProgramFiles%\Netscape\Navigator 9\navigator.exe)", "Browse..."})
+        Me.txtComboBrowser.Location = New System.Drawing.Point(158, 147)
+        Me.txtComboBrowser.Name = "txtComboBrowser"
+        Me.txtComboBrowser.Size = New System.Drawing.Size(281, 21)
+        Me.txtComboBrowser.TabIndex = 6
+        Me.txtComboBrowser.Text = "Default link handler"
+        AddHandler Me.txtComboBrowser.SelectedIndexChanged, AddressOf Me.TxtComboBrowser_SelectedIndexChanged
+        '
+        'chkRememberBrowser
+        '
+        Me.chkRememberBrowser.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.chkRememberBrowser.AutoSize = true
+        Me.chkRememberBrowser.Location = New System.Drawing.Point(445, 149)
+        Me.chkRememberBrowser.Name = "chkRememberBrowser"
+        Me.chkRememberBrowser.Size = New System.Drawing.Size(77, 17)
+        Me.chkRememberBrowser.TabIndex = 7
+        Me.chkRememberBrowser.Text = "Remember"
+        Me.chkRememberBrowser.UseVisualStyleBackColor = true
+        AddHandler Me.chkRememberBrowser.Click, AddressOf Me.ChkRememberBrowser_Click
+        '
         'Searchy
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(534, 172)
+        Me.Controls.Add(Me.chkRememberBrowser)
+        Me.Controls.Add(Me.txtComboBrowser)
+        Me.Controls.Add(Me.lblBrowser)
         Me.Controls.Add(Me.btnSearch)
         Me.Controls.Add(Me.cbEngine)
         Me.Controls.Add(Me.lblTypeOfSearch)
         Me.Controls.Add(Me.txtQuery)
         Me.Controls.Add(Me.pnlTop)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.HelpButton = true
+        Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
         Me.Name = "Searchy"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Searchy"
-        Me.TopMost = True
-        Me.pnlTop.ResumeLayout(False)
-        Me.pnlTop.PerformLayout()
-        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.NotificationContextMenu.ResumeLayout(False)
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Me.TopMost = true
+        Me.pnlTop.ResumeLayout(false)
+        Me.pnlTop.PerformLayout
+        CType(Me.imgLogo,System.ComponentModel.ISupportInitialize).EndInit
+        Me.NotificationContextMenu.ResumeLayout(false)
+        Me.ResumeLayout(false)
+        Me.PerformLayout
     End Sub
+    Private chkRememberBrowser As System.Windows.Forms.CheckBox
+    Private txtComboBrowser As System.Windows.Forms.ComboBox
+    Private lblBrowser As System.Windows.Forms.Label
     Friend WithEvents pnlTop As System.Windows.Forms.Panel
     Friend WithEvents lblProductName As System.Windows.Forms.Label
     Friend WithEvents lblVersionSmall As System.Windows.Forms.Label
