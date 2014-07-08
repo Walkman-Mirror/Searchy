@@ -94,60 +94,174 @@ Public Class Searchy
         If txtQuery.Text = "" Then
             ' == Web ==
         ElseIf cbEngine.Text = "Google" Then 'Google
-            Process.Start("https://www.google.co.za/search?q=" & Query & "&qscrl=1")
+            If UseDefaultBrowser = True Then
+                Process.Start("https://www.google.co.za/search?q=" & Query & "&qscrl=1")
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://www.google.co.za/search?q=" & Query & "&qscrl=1")
+            End If
         ElseIf cbEngine.Text = "Yahoo" Then 'Yahoo
-            Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
+            End If
         ElseIf cbEngine.Text = "Bing" Then 'Bing
-            Process.Start("https://www.bing.com/search?q=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("https://www.bing.com/search?q=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://www.bing.com/search?q=" & Query)
+            End If
         ElseIf cbEngine.Text = "DuckDuckGo" Then 'DuckDuckGo
-            Process.Start("https://duckduckgo.com/?q=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("https://duckduckgo.com/?q=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://duckduckgo.com/?q=" & Query)
+            End If
             ' == Images ==
         ElseIf cbEngine.Text = "Google Images" Then 'Google Image Search
-            Process.Start("https://www.google.com/search?newwindow=1&site=&tbm=isch&source=hp&biw=1360&bih=621&q=" & Query & "&btnG=Search+by+image&oq=&gs_l=")
+            If UseDefaultBrowser = True Then
+                Process.Start("https://www.google.com/search?newwindow=1&site=&tbm=isch&source=hp&biw=1360&bih=621&q=" & Query & "&btnG=Search+by+image&oq=&gs_l=")
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://www.google.com/search?newwindow=1&site=&tbm=isch&source=hp&biw=1360&bih=621&q=" & Query & "&btnG=Search+by+image&oq=&gs_l=")
+            End If
         ElseIf cbEngine.Text = "Bing Images" Then 'Bing Image Search
-            Process.Start("http://www.bing.com/images/search?q=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("http://www.bing.com/images/search?q=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "http://www.bing.com/images/search?q=" & Query)
+            End If
             ' == Music ==
         ElseIf cbEngine.Text = "SoundCloud" Then 'SoundCloud
-            Process.Start("https://soundcloud.com/search?q=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("https://soundcloud.com/search?q=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://soundcloud.com/search?q=" & Query)
+            End If
         ElseIf cbEngine.Text = "Beatport" Then 'Beatport
-            Process.Start("http://www.beatport.com/search?query=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("http://www.beatport.com/search?query=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "http://www.beatport.com/search?query=" & Query)
+            End If
             ' == Video ==
         ElseIf cbEngine.Text = "YouTube" Then 'YouTube
-            Process.Start("https://www.youtube.com/results?search_query=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("https://www.youtube.com/results?search_query=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://www.youtube.com/results?search_query=" & Query)
+            End If
         ElseIf cbEngine.Text = "Dailymotion" Then 'Dailymotion
-            Process.Start("https://www.dailymotion.com/en/relevance/search/" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("https://www.dailymotion.com/en/relevance/search/" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://www.dailymotion.com/en/relevance/search/" & Query)
+            End If
         ElseIf cbEngine.Text = "Google Videos" Then 'Google Video Search
-            Process.Start("https://www.google.com/search?tbm=vid&hl=en&source=hp&biw=&bih=&q=" & Query & "&btnG=Google+Search&gbv=2&oq=&gs_l=")
+            If UseDefaultBrowser = True Then
+                Process.Start("https://www.google.com/search?tbm=vid&hl=en&source=hp&biw=&bih=&q=" & Query & "&btnG=Google+Search&gbv=2&oq=&gs_l=")
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://www.google.com/search?tbm=vid&hl=en&source=hp&biw=&bih=&q=" & Query & "&btnG=Google+Search&gbv=2&oq=&gs_l=")
+            End If
         ElseIf cbEngine.Text = "Bing Videos" Then 'Bing Video Search
-            Process.Start("http://www.bing.com/videos/search?q=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("http://www.bing.com/videos/search?q=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "http://www.bing.com/videos/search?q=" & Query)
+            End If
             ' == Social ==
         ElseIf cbEngine.Text = "Reddit" Then 'Reddit
-            Process.Start("http://www.reddit.com/search?q=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("http://www.reddit.com/search?q=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "http://www.reddit.com/search?q=" & Query)
+            End If
             ' == Maps ==
         ElseIf cbEngine.Text = "Google Maps" Then
-            Process.Start("https://www.google.com/maps/place/" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("https://www.google.com/maps/place/" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://www.google.com/maps/place/" & Query)
+            End If
             ' == Info ==
         ElseIf cbEngine.Text = "Wikipedia" Then 'Wikipedia
-            Process.Start("https://en.wikipedia.org/wiki/" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("https://en.wikipedia.org/wiki/" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://en.wikipedia.org/wiki/" & Query)
+            End If
         ElseIf cbEngine.Text = "Newgrounds" Then 'Newgrounds
-            Process.Start("http://www.newgrounds.com/search?topsearch_text=" & Query & "&topsearch_type=15")
+            If UseDefaultBrowser = True Then
+                Process.Start("http://www.newgrounds.com/search?topsearch_text=" & Query & "&topsearch_type=15")
+            Else
+                GetBrowser()
+                Process.Start(openIn, "http://www.newgrounds.com/search?topsearch_text=" & Query & "&topsearch_type=15")
+            End If
             ' == Products ==
         ElseIf cbEngine.Text = "eBay" Then 'eBay
-            Process.Start("http://www.ebay.com/sch/i.html?_trksid=p2050601.m570.l1313&_nkw=" & Query & "&_sacat=0&_from=R40")
+            If UseDefaultBrowser = True Then
+                Process.Start("http://www.ebay.com/sch/i.html?_trksid=p2050601.m570.l1313&_nkw=" & Query & "&_sacat=0&_from=R40")
+            Else
+                GetBrowser()
+                Process.Start(openIn, "http://www.ebay.com/sch/i.html?_trksid=p2050601.m570.l1313&_nkw=" & Query & "&_sacat=0&_from=R40")
+            End If
         ElseIf cbEngine.Text = "Amazon" Then 'Amazon
-            Process.Start("http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=" & Query)
+            End If
             ' == Code ==
         ElseIf cbEngine.Text = "GitHub" Then 'GitHub
-            Process.Start("https://github.com/search?q=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("https://github.com/search?q=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://github.com/search?q=" & Query)
+            End If
         ElseIf cbEngine.Text = "Bitbucket" Then 'Bitbucket
-            Process.Start("https://bitbucket.org/" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("https://bitbucket.org/" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://bitbucket.org/" & Query)
+            End If
         ElseIf cbEngine.Text = "Stack Overflow" Then 'Stack Overflow
-            Process.Start("https://stackoverflow.com/search?q=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("https://stackoverflow.com/search?q=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://stackoverflow.com/search?q=" & Query)
+            End If
         ElseIf cbEngine.Text = "Super User" Then 'Super User
-            Process.Start("https://superuser.com/search?q=" & Query)
+            If UseDefaultBrowser = True Then
+                Process.Start("https://superuser.com/search?q=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://superuser.com/search?q=" & Query)
+            End If
         ElseIf cbEngine.Text = "Stack Exchange" Then 'Stack Exchange
-            Process.Start("https://stackexchange.com/search?q=" & Query)
-
+            If UseDefaultBrowser = True Then
+                Process.Start("https://stackexchange.com/search?q=" & Query)
+            Else
+                GetBrowser()
+                Process.Start(openIn, "https://stackexchange.com/search?q=" & Query)
+            End If
         End If
     End Sub
 

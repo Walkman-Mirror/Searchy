@@ -89,6 +89,7 @@ Partial Class Searchy
         '
         'btnClose
         '
+        Me.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnClose.Location = New System.Drawing.Point(460, 12)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(62, 23)
@@ -109,6 +110,8 @@ Partial Class Searchy
         '
         'txtQuery
         '
+        Me.txtQuery.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left)  _
+                        Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.txtQuery.Location = New System.Drawing.Point(15, 115)
         Me.txtQuery.Name = "txtQuery"
         Me.txtQuery.Size = New System.Drawing.Size(326, 20)
@@ -125,6 +128,7 @@ Partial Class Searchy
         '
         'cbEngine
         '
+        Me.cbEngine.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.cbEngine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbEngine.DropDownWidth = 110
         Me.cbEngine.FormattingEnabled = true
@@ -137,6 +141,7 @@ Partial Class Searchy
         '
         'btnSearch
         '
+        Me.btnSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.btnSearch.Location = New System.Drawing.Point(432, 113)
         Me.btnSearch.Name = "btnSearch"
         Me.btnSearch.Size = New System.Drawing.Size(90, 23)
@@ -230,7 +235,6 @@ Partial Class Searchy
         '
         'lblBrowser
         '
-        Me.lblBrowser.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left),System.Windows.Forms.AnchorStyles)
         Me.lblBrowser.AutoSize = true
         Me.lblBrowser.Location = New System.Drawing.Point(3, 150)
         Me.lblBrowser.Name = "lblBrowser"
@@ -240,7 +244,7 @@ Partial Class Searchy
         '
         'txtComboBrowser
         '
-        Me.txtComboBrowser.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left)  _
+        Me.txtComboBrowser.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left)  _
                         Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.txtComboBrowser.FormattingEnabled = true
         Me.txtComboBrowser.Items.AddRange(New Object() {"Default link handler", "Mozilla Firefox (%ProgramFiles%\Mozilla Firefox\firefox.exe)", "Google Chrome (%ProgramFiles%\Google\Chrome\Application\chrome.exe)", "Opera 22 (%ProgramFiles%\Opera\launcher.exe)", "Opera 12 (%ProgramFiles%\Opera\opera.exe)", "Safari (%ProgramFiles%\Safari\Safari.exe)", "Avant Browser (%ProgramFiles%\Avant Browser\avant.exe)", "Lunascape6 (%ProgramFiles%\Lunascape\Lunascape6\Luna.exe)", "Sea Monkey (%ProgramFiles%\SeaMonkey\seamonkey.exe)", "Internet Explorer (%ProgramFiles%\Internet Explorer\iexplore.exe)", "Netscape Navigator 9 (%ProgramFiles%\Netscape\Navigator 9\navigator.exe)", "Browse..."})
@@ -253,7 +257,7 @@ Partial Class Searchy
         '
         'chkRememberBrowser
         '
-        Me.chkRememberBrowser.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
+        Me.chkRememberBrowser.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right),System.Windows.Forms.AnchorStyles)
         Me.chkRememberBrowser.AutoSize = true
         Me.chkRememberBrowser.Location = New System.Drawing.Point(445, 149)
         Me.chkRememberBrowser.Name = "chkRememberBrowser"
@@ -265,8 +269,10 @@ Partial Class Searchy
         '
         'Searchy
         '
+        Me.AcceptButton = Me.btnSearch
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(534, 172)
         Me.Controls.Add(Me.chkRememberBrowser)
         Me.Controls.Add(Me.txtComboBrowser)
