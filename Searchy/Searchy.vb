@@ -129,6 +129,13 @@ Public Class Searchy
                     GetBrowser()
                     Process.Start(openIn, "https://www.google.com/search?tbm=isch&qscrl=1&q=" & Query)
                 End If
+            Case "Google Images (Atari Breakout)"
+                If UseDefaultBrowser = True Then
+                    Process.Start("https://www.google.com/search?tbm=isch&qscrl=1&tbs=boee:1&q=" & Query)
+                Else
+                    GetBrowser()
+                    Process.Start(openIn, "https://www.google.com/search?tbm=isch&qscrl=1&tbs=boee:1&q=" & Query)
+                End If
             Case "Bing Images"
                 If UseDefaultBrowser = True Then
                     Process.Start("http://www.bing.com/images/search?q=" & Query)
@@ -313,7 +320,7 @@ Public Class Searchy
         End If
     End Sub
     
-    Sub TxtComboBrowser_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Sub TxtComboBrowser_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtComboBrowser.SelectedIndexChanged
         If txtComboBrowser.Text = "Default link handler" Then
             UseDefaultBrowser = True
         Else
@@ -323,13 +330,13 @@ Public Class Searchy
         If txtComboBrowser.Text = "Browse..." Then
             'openFileDialogBrowser.ShowDialog()
         End If
-        
+
         If My.Settings.RememberBrowser = True Then
             My.Settings.LastBrowser = txtComboBrowser.Text
         End If
     End Sub
     
-    Sub ChkRememberBrowser_Click(sender As Object, e As EventArgs)
+    Sub ChkRememberBrowser_Click(sender As Object, e As EventArgs) Handles chkRememberBrowser.Click
         My.Settings.RememberBrowser = chkRememberBrowser.Checked
         If My.Settings.RememberBrowser = True Then
             My.Settings.LastBrowser = txtComboBrowser.Text
