@@ -50,14 +50,14 @@ Partial Class Searchy
         Me.lblBrowser = New System.Windows.Forms.Label()
         Me.txtComboBrowser = New System.Windows.Forms.ComboBox()
         Me.chkRememberBrowser = New System.Windows.Forms.CheckBox()
-        Me.pnlTop.SuspendLayout
-        CType(Me.imgLogo,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.NotificationContextMenu.SuspendLayout
-        Me.SuspendLayout
+        Me.pnlTop.SuspendLayout()
+        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.NotificationContextMenu.SuspendLayout()
+        Me.SuspendLayout()
         '
         'pnlTop
         '
-        Me.pnlTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer), CType(CType(224,Byte),Integer))
+        Me.pnlTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.pnlTop.Controls.Add(Me.lblVersionSmall)
         Me.pnlTop.Controls.Add(Me.imgLogo)
         Me.pnlTop.Controls.Add(Me.btnClose)
@@ -69,8 +69,8 @@ Partial Class Searchy
         '
         'lblVersionSmall
         '
-        Me.lblVersionSmall.AutoSize = true
-        Me.lblVersionSmall.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.lblVersionSmall.AutoSize = True
+        Me.lblVersionSmall.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.lblVersionSmall.Location = New System.Drawing.Point(171, 14)
         Me.lblVersionSmall.Name = "lblVersionSmall"
         Me.lblVersionSmall.Size = New System.Drawing.Size(41, 13)
@@ -85,7 +85,7 @@ Partial Class Searchy
         Me.imgLogo.Size = New System.Drawing.Size(62, 62)
         Me.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.imgLogo.TabIndex = 3
-        Me.imgLogo.TabStop = false
+        Me.imgLogo.TabStop = False
         '
         'btnClose
         '
@@ -95,13 +95,13 @@ Partial Class Searchy
         Me.btnClose.Size = New System.Drawing.Size(62, 23)
         Me.btnClose.TabIndex = 2
         Me.btnClose.Text = "&X"
-        Me.btnClose.UseVisualStyleBackColor = true
+        Me.btnClose.UseVisualStyleBackColor = True
         '
         'lblProductName
         '
-        Me.lblProductName.AutoSize = true
-        Me.lblProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.lblProductName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer), CType(CType(64,Byte),Integer))
+        Me.lblProductName.AutoSize = True
+        Me.lblProductName.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblProductName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.lblProductName.Location = New System.Drawing.Point(67, 20)
         Me.lblProductName.Name = "lblProductName"
         Me.lblProductName.Size = New System.Drawing.Size(122, 33)

@@ -23,7 +23,7 @@ Public Class Searchy
     Dim UseDefaultBrowser As Boolean = True
     Dim ProgramFilesDir As String = Environment.GetEnvironmentVariable("ProgramFiles")
     Dim openIn As String = ""
-    
+
     'window-related stuff
 
     Private Sub Searchy_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -275,6 +275,10 @@ Public Class Searchy
     'settings
 
     Private Sub cbEngine_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEngine.SelectedIndexChanged
+        Select Case cbEngine.Text
+            Case "Google"
+                lblTypeOfSearch.Text = "Search the Web:"
+        End Select
         If My.Settings.RememberLastSearchEngine = True Then My.Settings.RememberLastSearchEngine_value = cbEngine.Text
     End Sub
 
@@ -291,7 +295,7 @@ Public Class Searchy
     Private Sub NotificationContextMenuSubmitFeedback_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuSubmitFeedback.Click
         Process.Start("https://github.com/deavmi/Searchy/issues/new")
     End Sub
-    
+
     Private Sub GetBrowser()
         If txtComboBrowser.Text = "Browse..." Or txtComboBrowser.Text = "" Then
             UseDefaultBrowser = True
@@ -319,7 +323,7 @@ Public Class Searchy
             openIn = txtComboBrowser.Text
         End If
     End Sub
-    
+
     Sub TxtComboBrowser_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtComboBrowser.SelectedIndexChanged
         If txtComboBrowser.Text = "Default link handler" Then
             UseDefaultBrowser = True
@@ -335,7 +339,7 @@ Public Class Searchy
             My.Settings.LastBrowser = txtComboBrowser.Text
         End If
     End Sub
-    
+
     Sub ChkRememberBrowser_Click(sender As Object, e As EventArgs) Handles chkRememberBrowser.Click
         My.Settings.RememberBrowser = chkRememberBrowser.Checked
         If My.Settings.RememberBrowser = True Then
