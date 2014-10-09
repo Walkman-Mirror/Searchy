@@ -1,5 +1,5 @@
 ﻿'Put description here
-'   FGOSS from DeavmiOSS. GPL v3 or above.
+'   Free Software from DeavmiOSS. GPL v3 or above.
 
 '   This program is free software: you can redistribute it and/or modify
 '   it under the terms of the GNU General Public License as published by
@@ -14,7 +14,7 @@
 '   You should have received a copy of the GNU General Public License
 '   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 '
-'   Contact the DeavmiOSS organization by electronic mail: mailto:tristankildaire@gmail.com or mailto:walkman@hackermail.com (mailto:matthewcarter17@gmail.com)
+'   Contact the DeavmiOSS organization by electronic mail: mailto:deavmioss@gmail.com
 
 Public Class Searchy
 
@@ -319,7 +319,7 @@ Public Class Searchy
             openIn = ProgramFilesDir & "\Internet Explorer\iexplore.exe"
         ElseIf txtComboBrowser.Text = "Netscape Navigator 9 (%ProgramFiles%\Netscape\Navigator 9\navigator.exe)" Then
             openIn = ProgramFilesDir & "\Netscape\Navigator 9\navigator.exe"
-        ElseIf system.io.File.Exists(txtComboBrowser.Text) Then
+        ElseIf System.IO.File.Exists(txtComboBrowser.Text) Then
             openIn = txtComboBrowser.Text
         End If
     End Sub
