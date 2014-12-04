@@ -95,10 +95,10 @@ Public Class Searchy
             ' == Web ==
             Case "Google"
                 If UseDefaultBrowser = True Then
-                    Process.Start("https://www.google.co.za/search?qscrl=1&q=" & Query)
+                    Process.Start("https://www.google.co.za/search?q=" & Query)
                 Else
                     GetBrowser()
-                    Process.Start(openIn, "https://www.google.co.za/search?qscrl=1&q=" & Query)
+                    Process.Start(openIn, "https://www.google.co.za/search?q=" & Query)
                 End If
             Case "Yahoo"
                 If UseDefaultBrowser = True Then
