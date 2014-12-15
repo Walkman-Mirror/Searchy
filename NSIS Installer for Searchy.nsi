@@ -2,11 +2,12 @@
 ; get NSIS at http://tenet.dl.sourceforge.net/project/nsis/NSIS%202/2.46/nsis-2.46-setup.exe
 ; As a program that all Power PC users should have, Notepad ++ is recommended to edit this file
 
-; AddBrandingImage top 20
-; Icon Searchy\youtube_withLink.ico
+AddBrandingImage top 20
+Icon "Searchy\images\1398027695_33852.ico"
 Caption "Searchy Installer"
 Name "Searchy"
 AutoCloseWindow true
+ShowInstDetails show
 
 InstallDir $PROGRAMFILES\DeavmiOSS\Searchy
 
@@ -33,7 +34,7 @@ Section "Searchy Start Menu Shortcuts"
   CreateDirectory "$SMPROGRAMS\DeavmiOSS"
   CreateShortCut "$SMPROGRAMS\DeavmiOSS\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "Start Searchy"
   CreateShortCut "$SMPROGRAMS\DeavmiOSS\Uninstall Searchy.lnk" "$INSTDIR\Searchy-Uninst.exe" "" "" "" "" "" "Uninstall Searchy"
-; Syntax for CreateShortCut: link.lnk target.file [parameters [icon.file [icon_index_number [start_options [keyboard_shortcut [description]]]]]]
+  ;Syntax for CreateShortCut: link.lnk target.file [parameters [icon.file [icon_index_number [start_options [keyboard_shortcut [description]]]]]]
 SectionEnd
 
 Section "Searchy Desktop Shortcut"
@@ -69,9 +70,7 @@ Function .onInit
   MessageBox MB_YESNO "This will install Searchy. Do you wish to continue?" IDYES gogogo
     Abort
   gogogo:
-;  File "Searchy\youtube_withLink.ico"
-;  SetBrandingImage "[/RESIZETOFIT] Searchy\youtube_withLink.ico"
-;  SetBrandingImage "[/RESIZETOFIT] youtube_withLink.ico"
+  SetBrandingImage "[/RESIZETOFIT] 'Searchy\images\1398027695_33852.ico'"
   SetShellVarContext all
   SetAutoClose true
 FunctionEnd
