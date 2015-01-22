@@ -205,7 +205,7 @@ Partial Class About
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(274, 16)
         Me.Label5.TabIndex = 69
-        Me.Label5.Text = "This software is registered under the GPL v3 ."
+        Me.Label5.Text = "This software is licensed under the GNU General Public License v3.0 or above."
         '
         'Label4
         '
