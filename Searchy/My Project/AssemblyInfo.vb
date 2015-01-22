@@ -12,9 +12,9 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("Searchy")> 
 <Assembly: AssemblyDescription("Search for almost everything on the web, quickly.")> 
-<Assembly: AssemblyCompany("DeavmiOSS")> 
+<Assembly: AssemblyCompany("Crowbar")> 
 <Assembly: AssemblyProduct("Searchy")> 
-<Assembly: AssemblyCopyright("")> 
+<Assembly: AssemblyCopyright("Crowbar 2015. GNU GPL v3.0 or above.")> 
 <Assembly: AssemblyTrademark("Search for almost everything on the web.")> 
 
 <Assembly: ComVisible(False)> 
