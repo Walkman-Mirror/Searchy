@@ -14,7 +14,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Search for almost everything on the web, quickly.")> 
 <Assembly: AssemblyCompany("Crowbar")> 
 <Assembly: AssemblyProduct("Searchy")> 
-<Assembly: AssemblyCopyright("Crowbar 2015. GNU GPL v3.0 or above.")> 
+<Assembly: AssemblyCopyright("Crowbar 2015. This software is licensed under the GNU General Public License v3.0 or above.")> 
 <Assembly: AssemblyTrademark("Search for almost everything on the web.")> 
 
 <Assembly: ComVisible(False)> 
