@@ -20,9 +20,7 @@ Public Class Searchy
 
     'Public declarations
     Public version As String = My.Application.Info.Version.ToString & " (pre-release)"
-    Dim UseDefaultBrowser As Boolean = True
     Dim ProgramFilesDir As String = Environment.GetEnvironmentVariable("ProgramFiles")
-    Dim openIn As String = ""
 
     'window-related stuff
 
@@ -94,181 +92,61 @@ Public Class Searchy
         Select Case cbEngine.Text
             ' == Web ==
             Case "Google"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://www.google.co.za/search?q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://www.google.co.za/search?q=" & Query)
-                End If
+                OpenLink("https://www.google.co.za/search?q=" & Query)
             Case "Yahoo"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
-                End If
+                OpenLink("https://search.yahoo.com/search;_ylt=AuZofarTFB0Bfxqb9LY04nLoQeF_?p=" & Query)
             Case "Bing"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://www.bing.com/search?q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://www.bing.com/search?q=" & Query)
-                End If
+                OpenLink("https://www.bing.com/search?q=" & Query)
             Case "DuckDuckGo"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://duckduckgo.com/?q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://duckduckgo.com/?q=" & Query)
-                End If
+                OpenLink("https://duckduckgo.com/?q=" & Query)
                 ' == Images ==
             Case "Google Images"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://www.google.com/search?tbm=isch&qscrl=1&q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://www.google.com/search?tbm=isch&qscrl=1&q=" & Query)
-                End If
+                OpenLink("https://www.google.com/search?tbm=isch&qscrl=1&q=" & Query)
             Case "Google Images (Atari Breakout)"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://www.google.com/search?tbm=isch&qscrl=1&tbs=boee:1&q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://www.google.com/search?tbm=isch&qscrl=1&tbs=boee:1&q=" & Query)
-                End If
+                OpenLink("https://www.google.com/search?tbm=isch&qscrl=1&tbs=boee:1&q=" & Query)
             Case "Bing Images"
-                If UseDefaultBrowser = True Then
-                    Process.Start("http://www.bing.com/images/search?q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "http://www.bing.com/images/search?q=" & Query)
-                End If
+                OpenLink("http://www.bing.com/images/search?q=" & Query)
                 ' == Music ==
             Case "SoundCloud"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://soundcloud.com/search?q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://soundcloud.com/search?q=" & Query)
-                End If
+                OpenLink("https://soundcloud.com/search?q=" & Query)
             Case "Beatport"
-                If UseDefaultBrowser = True Then
-                    Process.Start("http://www.beatport.com/search?query=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "http://www.beatport.com/search?query=" & Query)
-                End If
+                OpenLink("http://www.beatport.com/search?query=" & Query)
                 ' == Video ==
             Case "YouTube"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://www.youtube.com/results?search_query=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://www.youtube.com/results?search_query=" & Query)
-                End If
+                OpenLink("https://www.youtube.com/results?search_query=" & Query)
             Case "Dailymotion"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://www.dailymotion.com/en/relevance/search/" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://www.dailymotion.com/en/relevance/search/" & Query)
-                End If
+                OpenLink("https://www.dailymotion.com/en/relevance/search/" & Query)
             Case "Google Videos"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://www.google.com/search?tbm=vid&qscrl=1&q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://www.google.com/search?tbm=vid&qscrl=1&q=" & Query)
-                End If
+                OpenLink("https://www.google.com/search?tbm=vid&qscrl=1&q=" & Query)
             Case "Bing Videos"
-                If UseDefaultBrowser = True Then
-                    Process.Start("http://www.bing.com/videos/search?q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "http://www.bing.com/videos/search?q=" & Query)
-                End If
+                OpenLink(("http://www.bing.com/videos/search?q=" & Query)
                 ' == Social ==
             Case "Reddit"
-                If UseDefaultBrowser = True Then
-                    Process.Start("http://www.reddit.com/search?q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "http://www.reddit.com/search?q=" & Query)
-                End If
+                OpenLink("http://www.reddit.com/search?q=" & Query)
                 ' == Maps ==
             Case "Google Maps"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://www.google.com/maps/place/" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://www.google.com/maps/place/" & Query)
-                End If
+                OpenLink("https://www.google.com/maps/place/" & Query)
                 ' == Info ==
             Case "Wikipedia"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://en.wikipedia.org/wiki/" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://en.wikipedia.org/wiki/" & Query)
-                End If
+                OpenLink("https://en.wikipedia.org/wiki/" & Query)
             Case "Newgrounds"
-                If UseDefaultBrowser = True Then
-                    Process.Start("http://www.newgrounds.com/search?topsearch_type=15&topsearch_text=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "http://www.newgrounds.com/search?topsearch_type=15&topsearch_text=" & Query)
-                End If
+                OpenLink("http://www.newgrounds.com/search?topsearch_type=15&topsearch_text=" & Query)
                 ' == Products ==
             Case "eBay"
-                If UseDefaultBrowser = True Then
-                    Process.Start("http://www.ebay.com/sch/i.html?_trksid=p2050601.m570.l1313&_nkw=" & Query & "&_sacat=0&_from=R40")
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "http://www.ebay.com/sch/i.html?_trksid=p2050601.m570.l1313&_nkw=" & Query & "&_sacat=0&_from=R40")
-                End If
+                OpenLink("http://www.ebay.com/sch/i.html?_trksid=p2050601.m570.l1313&_nkw=" & Query & "&_sacat=0&_from=R40")
             Case "Amazon"
-                If UseDefaultBrowser = True Then
-                    Process.Start("http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=" & Query)
-                End If
+                OpenLink("http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=" & Query)
                 ' == Code ==
             Case "GitHub"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://github.com/search?q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://github.com/search?q=" & Query)
-                End If
+                OpenLink("https://github.com/search?q=" & Query)
             Case "Bitbucket"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://bitbucket.org/" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://bitbucket.org/" & Query)
-                End If
+                OpenLink("https://bitbucket.org/" & Query)
             Case "Stack Overflow"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://stackoverflow.com/search?q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://stackoverflow.com/search?q=" & Query)
-                End If
+                OpenLink("https://stackoverflow.com/search?q=" & Query)
             Case "Super User"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://superuser.com/search?q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://superuser.com/search?q=" & Query)
-                End If
+                OpenLink("https://superuser.com/search?q=" & Query)
             Case "Stack Exchange"
-                If UseDefaultBrowser = True Then
-                    Process.Start("https://stackexchange.com/search?q=" & Query)
-                Else
-                    GetBrowser()
-                    Process.Start(openIn, "https://stackexchange.com/search?q=" & Query)
-                End If
+                OpenLink("https://stackexchange.com/search?q=" & Query)
         End Select
     End Sub
 
@@ -289,48 +167,44 @@ Public Class Searchy
     'links
 
     Private Sub NotificationContextMenuProjectSite_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuProjectSite.Click
-        Process.Start("https://deavmi.github.io/Searchy")
+        OpenLink("https://deavmi.github.io/Searchy")
     End Sub
 
     Private Sub NotificationContextMenuSubmitFeedback_Click(sender As Object, e As EventArgs) Handles NotificationContextMenuSubmitFeedback.Click
-        Process.Start("https://github.com/deavmi/Searchy/issues/new")
+        OpenLink("https://github.com/deavmi/Searchy/issues/new")
     End Sub
 
-    Private Sub GetBrowser()
+    Private Sub OpenLink(link As String)
         If txtComboBrowser.Text = "Browse..." Or txtComboBrowser.Text = "" Then
-            UseDefaultBrowser = True
+            Process.Start(link)
         ElseIf txtComboBrowser.Text = "Mozilla Firefox (%ProgramFiles%\Mozilla Firefox\firefox.exe)" Then
-            openIn = ProgramFilesDir & "\Mozilla Firefox\firefox.exe"
+            Process.Start(ProgramFilesDir & "\Mozilla Firefox\firefox.exe", link)
         ElseIf txtComboBrowser.Text = "Google Chrome (%ProgramFiles%\Google\Chrome\Application\chrome.exe)" Then
-            openIn = ProgramFilesDir & "\Google\Chrome\Application\chrome.exe"
+            Process.Start(ProgramFilesDir & "\Google\Chrome\Application\chrome.exe", link)
         ElseIf txtComboBrowser.Text = "Opera 22 (%ProgramFiles%\Opera\launcher.exe)" Then
-            openIn = ProgramFilesDir & "\Opera\launcher.exe"
+            Process.Start(ProgramFilesDir & "\Opera\launcher.exe", link)
         ElseIf txtComboBrowser.Text = "Opera 12 (%ProgramFiles%\Opera\opera.exe)" Then
-            openIn = ProgramFilesDir & "\Opera\opera.exe"
+            Process.Start(ProgramFilesDir & "\Opera\opera.exe", link)
         ElseIf txtComboBrowser.Text = "Safari (%ProgramFiles%\Safari\Safari.exe)" Then
-            openIn = ProgramFilesDir & "\Safari\Safari.exe"
+            Process.Start(ProgramFilesDir & "\Safari\Safari.exe", link)
         ElseIf txtComboBrowser.Text = "Avant Browser (%ProgramFiles%\Avant Browser\avant.exe)" Then
-            openIn = ProgramFilesDir & "\Avant Browser\avant.exe"
+            Process.Start(ProgramFilesDir & "\Avant Browser\avant.exe", link)
         ElseIf txtComboBrowser.Text = "Lunascape6 (%ProgramFiles%\Lunascape\Lunascape6\Luna.exe)" Then
-            openIn = ProgramFilesDir & "\Lunascape\Lunascape6\Luna.exe"
+            Process.Start(ProgramFilesDir & "\Lunascape\Lunascape6\Luna.exe", link)
         ElseIf txtComboBrowser.Text = "Sea Monkey (%ProgramFiles%\SeaMonkey\seamonkey.exe)" Then
-            openIn = ProgramFilesDir & "\SeaMonkey\seamonkey.exe"
+            Process.Start(ProgramFilesDir & "\SeaMonkey\seamonkey.exe", link)
         ElseIf txtComboBrowser.Text = "Internet Explorer (%ProgramFiles%\Internet Explorer\iexplore.exe)" Then
-            openIn = ProgramFilesDir & "\Internet Explorer\iexplore.exe"
+            Process.Start(ProgramFilesDir & "\Internet Explorer\iexplore.exe", link)
         ElseIf txtComboBrowser.Text = "Netscape Navigator 9 (%ProgramFiles%\Netscape\Navigator 9\navigator.exe)" Then
-            openIn = ProgramFilesDir & "\Netscape\Navigator 9\navigator.exe"
+            Process.Start(ProgramFilesDir & "\Netscape\Navigator 9\navigator.exe", link)
         ElseIf System.IO.File.Exists(txtComboBrowser.Text) Then
-            openIn = txtComboBrowser.Text
+            Process.Start(txtComboBrowser.Text, link)
+        Else
+            MsgBox("File """ & txtComboBrowser.Text & """ not found!", MsgBoxStyle.Critical, "Executable not found")
         End If
     End Sub
 
-    Sub TxtComboBrowser_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtComboBrowser.SelectedIndexChanged
-        If txtComboBrowser.Text = "Default link handler" Then
-            UseDefaultBrowser = True
-        Else
-            UseDefaultBrowser = False
-        End If
-
+    Sub txtComboBrowser_SelectedIndexChanged(sender As Object, e As EventArgs) Handles txtComboBrowser.SelectedIndexChanged
         If txtComboBrowser.Text = "Browse..." Then
             'openFileDialogBrowser.ShowDialog()
         End If
@@ -340,7 +214,7 @@ Public Class Searchy
         End If
     End Sub
 
-    Sub ChkRememberBrowser_Click(sender As Object, e As EventArgs) Handles chkRememberBrowser.Click
+    Sub chkRememberBrowser_Click(sender As Object, e As EventArgs) Handles chkRememberBrowser.Click
         My.Settings.RememberBrowser = chkRememberBrowser.Checked
         If My.Settings.RememberBrowser = True Then
             My.Settings.LastBrowser = txtComboBrowser.Text
