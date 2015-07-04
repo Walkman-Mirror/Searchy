@@ -132,7 +132,7 @@ Partial Class Searchy
         Me.cbEngine.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbEngine.DropDownWidth = 110
         Me.cbEngine.FormattingEnabled = True
-        Me.cbEngine.Items.AddRange(New Object() {" == Web ==", "Google", "Yahoo", "Bing", "DuckDuckGo", " == Images ==", "Google Images", "Google Images (Atari Breakout)", "Bing Images", " == Music ==", "SoundCloud", "Beatport", " == Video ==", "YouTube", "Dailymotion", "Google Videos", "Bing Videos", " == Social ==", "Reddit", " == Entertainment ==", "Newgrounds", " == Info ==", "Wikipedia", " == Products ==", "eBay", "Amazon", " == Code ==", "GitHub", "Bitbucket", "Stack Overflow", "Super User", "Stack Exchange"})
+        Me.cbEngine.Items.AddRange(New Object() {" == Web ==", "Google", "Yahoo", "Bing", "DuckDuckGo", " == Images ==", "Google Images", "Google Images (Atari Breakout)", "Bing Images", " == Music ==", "SoundCloud", "Beatport", " == Video ==", "YouTube", "Dailymotion", "Google Videos", "Bing Videos", " == Social ==", "Reddit", " == Entertainment ==", "Newgrounds", " == Maps ==", "Google Maps", " == Info ==", "Wikipedia", " == Products ==", "eBay", "Amazon", " == Code ==", "GitHub", "Bitbucket", "Stack Overflow", "Super User", "Stack Exchange"})
         Me.cbEngine.Location = New System.Drawing.Point(347, 114)
         Me.cbEngine.MaxDropDownItems = 50
         Me.cbEngine.Name = "cbEngine"

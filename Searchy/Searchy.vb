@@ -101,9 +101,9 @@ Public Class Searchy
                 OpenLink("https://duckduckgo.com/?q=" & Query)
                 ' == Images ==
             Case "Google Images"
-                OpenLink("https://www.google.com/search?tbm=isch&qscrl=1&q=" & Query)
+                OpenLink("https://www.google.com/search?tbm=isch&q=" & Query)
             Case "Google Images (Atari Breakout)"
-                OpenLink("https://www.google.com/search?tbm=isch&qscrl=1&tbs=boee:1&q=" & Query)
+                OpenLink("https://www.google.com/search?tbm=isch&tbs=boee:1&q=" & Query)
             Case "Bing Images"
                 OpenLink("http://www.bing.com/images/search?q=" & Query)
                 ' == Music ==
@@ -117,20 +117,21 @@ Public Class Searchy
             Case "Dailymotion"
                 OpenLink("https://www.dailymotion.com/en/relevance/search/" & Query)
             Case "Google Videos"
-                OpenLink("https://www.google.com/search?tbm=vid&qscrl=1&q=" & Query)
+                OpenLink("https://www.google.com/search?tbm=vid&q=" & Query)
             Case "Bing Videos"
-                OpenLink(("http://www.bing.com/videos/search?q=" & Query)
+                OpenLink("http://www.bing.com/videos/search?q=" & Query)
                 ' == Social ==
             Case "Reddit"
                 OpenLink("http://www.reddit.com/search?q=" & Query)
+                ' == Entertainment ==
+            Case "Newgrounds"
+                OpenLink("http://www.newgrounds.com/search?topsearch_type=15&topsearch_text=" & Query)
                 ' == Maps ==
             Case "Google Maps"
                 OpenLink("https://www.google.com/maps/place/" & Query)
                 ' == Info ==
             Case "Wikipedia"
                 OpenLink("https://en.wikipedia.org/wiki/" & Query)
-            Case "Newgrounds"
-                OpenLink("http://www.newgrounds.com/search?topsearch_type=15&topsearch_text=" & Query)
                 ' == Products ==
             Case "eBay"
                 OpenLink("http://www.ebay.com/sch/i.html?_trksid=p2050601.m570.l1313&_nkw=" & Query & "&_sacat=0&_from=R40")
@@ -154,7 +155,65 @@ Public Class Searchy
 
     Private Sub cbEngine_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEngine.SelectedIndexChanged
         Select Case cbEngine.Text
+            ' == Web ==
             Case "Google"
+                lblTypeOfSearch.Text = "Search the Web:"
+            Case "Yahoo"
+                lblTypeOfSearch.Text = "Search the Web:"
+            Case "Bing"
+                lblTypeOfSearch.Text = "Search the Web:"
+            Case "DuckDuckGo"
+                lblTypeOfSearch.Text = "Search the Web:"
+                ' == Images ==
+            Case "Google Images"
+                lblTypeOfSearch.Text = "Search Images:"
+            Case "Google Images (Atari Breakout)"
+                lblTypeOfSearch.Text = "Search Images:"
+            Case "Bing Images"
+                lblTypeOfSearch.Text = "Search Images:"
+                ' == Music ==
+            Case "SoundCloud"
+                lblTypeOfSearch.Text = "Search Music:"
+            Case "Beatport"
+                lblTypeOfSearch.Text = "Search Music:"
+                ' == Video ==
+            Case "YouTube"
+                lblTypeOfSearch.Text = "Search Videos:"
+            Case "Dailymotion"
+                lblTypeOfSearch.Text = "Search Videos:"
+            Case "Google Videos"
+                lblTypeOfSearch.Text = "Search Videos:"
+            Case "Bing Videos"
+                lblTypeOfSearch.Text = "Search Videos:"
+                ' == Social ==
+            Case "Reddit"
+                lblTypeOfSearch.Text = "Search Social sites:"
+                ' == Entertainment ==
+            Case "Newgrounds"
+                lblTypeOfSearch.Text = "Search Entertainment sites:"
+                ' == Maps ==
+            Case "Google Maps"
+                lblTypeOfSearch.Text = "Search Maps:"
+                ' == Info ==
+            Case "Wikipedia"
+                lblTypeOfSearch.Text = "Search Informational sites:"
+                ' == Products ==
+            Case "eBay"
+                lblTypeOfSearch.Text = "Search Products:"
+            Case "Amazon"
+                lblTypeOfSearch.Text = "Search Products:"
+                ' == Code ==
+            Case "GitHub"
+                lblTypeOfSearch.Text = "Search Code:"
+            Case "Bitbucket"
+                lblTypeOfSearch.Text = "Search Code:"
+            Case "Stack Overflow"
+                lblTypeOfSearch.Text = "Search Code:"
+            Case "Super User"
+                lblTypeOfSearch.Text = "Search Code:"
+            Case "Stack Exchange"
+                lblTypeOfSearch.Text = "Search Code:"
+            Case Else:
                 lblTypeOfSearch.Text = "Search the Web:"
         End Select
         If My.Settings.RememberLastSearchEngine = True Then My.Settings.RememberLastSearchEngine_value = cbEngine.Text
@@ -175,7 +234,7 @@ Public Class Searchy
     End Sub
 
     Private Sub OpenLink(link As String)
-        If txtComboBrowser.Text = "Browse..." Or txtComboBrowser.Text = "" Then
+        If txtComboBrowser.Text = "Browse..." Or txtComboBrowser.Text = "" Or txtComboBrowser.Text = "Default link handler" Then
             Process.Start(link)
         ElseIf txtComboBrowser.Text = "Mozilla Firefox (%ProgramFiles%\Mozilla Firefox\firefox.exe)" Then
             Process.Start(ProgramFilesDir & "\Mozilla Firefox\firefox.exe", link)
