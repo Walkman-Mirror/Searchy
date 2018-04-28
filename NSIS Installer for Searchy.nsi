@@ -2,91 +2,132 @@
 ; get NSIS at http://nsis.sourceforge.net/Download
 ; As a program that all Power PC users should have, Notepad++ is recommended to edit this file
 
-AddBrandingImage top 20
+!define ProgramName "Searchy"
 Icon "Searchy\images\1398027695_33852.ico"
-Caption "Searchy Installer"
-Name "Searchy"
-AutoCloseWindow true
+
+Name "${ProgramName}"
+Caption "${ProgramName} Installer"
+XPStyle on
 ShowInstDetails show
+AutoCloseWindow true
+
+LicenseBkColor /windows
+LicenseData "LICENSE"
+LicenseForceSelection checkbox "I have read and understand this notice"
+LicenseText "Please read the notice below before installing ${ProgramName}. If you understand the notice, click the checkbox below and click Next."
 
 InstallDir $PROGRAMFILES\DeavmiOSS\Searchy
-
-OutFile "Searchy\bin\Release\Searchy-Installer.exe"
+OutFile "Searchy\bin\Release\${ProgramName}-Installer.exe"
 
 ; Pages
 
+Page license
 Page components
 Page directory
 Page instfiles
+Page custom postInstallShow postInstallFinish ": Install Complete"
 UninstPage uninstConfirm
 UninstPage instfiles
 
 ; Sections
 
-Section "Searchy Executable & Uninstaller"
+Section "Executable & Uninstaller"
   SectionIn RO
   SetOutPath $INSTDIR
-  File "Searchy\bin\Release\Searchy.exe"
-  WriteUninstaller "Searchy-Uninst.exe"
+  File "Searchy\bin\Release\${ProgramName}.exe"
+  WriteUninstaller "${ProgramName}-Uninst.exe"
 SectionEnd
 
-Section "Searchy Start Menu Shortcuts"
+Section "Start Menu Shortcuts"
   CreateDirectory "$SMPROGRAMS\DeavmiOSS"
-  CreateShortCut "$SMPROGRAMS\DeavmiOSS\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "Start Searchy"
-  CreateShortCut "$SMPROGRAMS\DeavmiOSS\Uninstall Searchy.lnk" "$INSTDIR\Searchy-Uninst.exe" "" "" "" "" "" "Uninstall Searchy"
+  CreateShortCut "$SMPROGRAMS\DeavmiOSS\${ProgramName}.lnk" "$INSTDIR\${ProgramName}.exe" "" "$INSTDIR\${ProgramName}.exe" "" "" "" "Start ${ProgramName}"
+  CreateShortCut "$SMPROGRAMS\DeavmiOSS\Uninstall ${ProgramName}.lnk" "$INSTDIR\${ProgramName}-Uninst.exe" "" "" "" "" "" "Uninstall ${ProgramName}"
   ;Syntax for CreateShortCut: link.lnk target.file [parameters [icon.file [icon_index_number [start_options [keyboard_shortcut [description]]]]]]
 SectionEnd
 
-Section "Searchy Desktop Shortcut"
-  CreateShortCut "$DESKTOP\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "Searchy"
+Section "Desktop Shortcut"
+  CreateShortCut "$DESKTOP\${ProgramName}.lnk" "$INSTDIR\${ProgramName}.exe" "" "$INSTDIR\${ProgramName}.exe" "" "" "" "${ProgramName}"
 SectionEnd
 
-Section "Searchy Quick Launch Shortcut"
-  CreateShortCut "$QUICKLAUNCH\Searchy.lnk" "$INSTDIR\Searchy.exe" "" "$INSTDIR\Searchy.exe" "" "" "" "Searchy"
-SectionEnd
-
-;Section "More apps from DeavmiOSS"
-; this should have sub options for available apps, that are downloaded
-;SectionEnd
-
-; Uninstaller
-
-Section "Uninstall"
-  Delete "$INSTDIR\Searchy-Uninst.exe"   ; Remove Application Files
-  Delete "$INSTDIR\Searchy.exe"
-  RMDir $INSTDIR
-  
-  Delete "$SMPROGRAMS\DeavmiOSS\Searchy.lnk"   ; Remove Start Menu Shortcuts & Folder
-  Delete "$SMPROGRAMS\DeavmiOSS\Uninstall Searchy.lnk"
-  RMDir $SMPROGRAMS\DeavmiOSS
-  
-  Delete "$DESKTOP\Searchy.lnk"   ; Remove Desktop Shortcut
-  Delete "$QUICKLAUNCH\Searchy.lnk"   ; Remove Quick Launch shortcut
+Section "Quick Launch Shortcut"
+  CreateShortCut "$QUICKLAUNCH\${ProgramName}.lnk" "$INSTDIR\${ProgramName}.exe" "" "$INSTDIR\${ProgramName}.exe" "" "" "" "${ProgramName}"
 SectionEnd
 
 ; Functions
 
 Function .onInit
-  MessageBox MB_YESNO "This will install Searchy. Do you wish to continue?" IDYES gogogo
-    Abort
-  gogogo:
-  SetBrandingImage "[/RESIZETOFIT] 'Searchy\images\1398027695_33852.ico'"
   SetShellVarContext all
   SetAutoClose true
 FunctionEnd
 
-Function .onInstSuccess
-  MessageBox MB_YESNO "Install Succeeded! Open Wiki?" IDNO NoReadme
-    ExecShell "open" "https://github.com/Deavmi/Searchy/wiki"
-  NoReadme:
+; Custom Install Complete page
+
+!include nsDialogs.nsh
+!include LogicLib.nsh ; For ${IF} logic
+Var Dialog
+Var Label
+Var CheckboxReadme
+Var CheckboxReadme_State
+Var CheckboxRunProgram
+Var CheckboxRunProgram_State
+
+Function postInstallShow
+  nsDialogs::Create 1018
+  Pop $Dialog
+  ${If} $Dialog == error
+    Abort
+  ${EndIf}
+  
+  ${NSD_CreateLabel} 0 0 100% 12u "Setup will launch these tasks when you click close:"
+  Pop $Label
+  
+  ${NSD_CreateCheckbox} 10u 30u 100% 10u "&Open Wiki"
+  Pop $CheckboxReadme
+  ${If} $CheckboxReadme_State == ${BST_CHECKED}
+    ${NSD_Check} $CheckboxReadme
+  ${EndIf}
+  
+  ${NSD_CreateCheckbox} 10u 50u 100% 10u "&Launch ${ProgramName}"
+  Pop $CheckboxRunProgram
+  ${If} $CheckboxRunProgram_State == ${BST_CHECKED}
+    ${NSD_Check} $CheckboxRunProgram
+  ${EndIf}
+  
+  # alternative for the above ${If}:
+  #${NSD_SetState} $Checkbox_State
+  nsDialogs::Show
+FunctionEnd
+
+Function postInstallFinish
+  ${NSD_GetState} $CheckboxReadme $CheckboxReadme_State
+  ${NSD_GetState} $CheckboxRunProgram $CheckboxRunProgram_State
+  
+  ${If} $CheckboxReadme_State == ${BST_CHECKED}
+    ExecShell "open" "https://github.com/Walkman-Mirror/${ProgramName}/wiki"
+  ${EndIf}
+  ${If} $CheckboxRunProgram_State == ${BST_CHECKED}
+    ExecShell "open" "$INSTDIR\${ProgramName}.exe"
+  ${EndIf}
 FunctionEnd
 
 ; Uninstaller
 
+Section "Uninstall"
+  Delete "$INSTDIR\${ProgramName}-Uninst.exe"   ; Remove Application Files
+  Delete "$INSTDIR\${ProgramName}.exe"
+  RMDir "$INSTDIR"
+  
+  Delete "$SMPROGRAMS\DeavmiOSS\${ProgramName}.lnk"   ; Remove Start Menu Shortcuts & Folder
+  Delete "$SMPROGRAMS\DeavmiOSS\Uninstall ${ProgramName}.lnk"
+  RMDir "$SMPROGRAMS\DeavmiOSS"
+  
+  Delete "$DESKTOP\${ProgramName}.lnk"   ; Remove Desktop Shortcut
+  Delete "$QUICKLAUNCH\${ProgramName}.lnk"   ; Remove Quick Launch shortcut
+SectionEnd
+
+; Uninstaller Functions
+
 Function un.onInit
-  MessageBox MB_YESNO "This will uninstall Searchy. Do you wish to continue?" IDYES NoAbort
-    Abort ; causes uninstaller to quit.
-  NoAbort:
   SetShellVarContext all
   SetAutoClose true
 FunctionEnd
